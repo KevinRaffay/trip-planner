@@ -2,6 +2,7 @@ import React from 'react';
 import { formatDay } from '../lib/dates.js';
 import { EMPTY_FILTERS, isFiltering } from '../lib/filters.js';
 import { setFilters } from '../lib/route.js';
+import { legUrl, legLinkLabel } from '../lib/maps.js';
 
 export const cityOf = (data, id) => data.cities.find((c) => c.id === id);
 export const tagName = (data, id) => data.tags.find((t) => t.id === id)?.name ?? id;
@@ -25,6 +26,15 @@ export function CityDot({ data, id }) {
 
 const modeIcon = (mode) => (mode === 'air' ? '✈' : '🚆');
 
+/** External Google Maps link; opens the Maps app on a phone. */
+export function MapLink({ href, children, className = 'maplink' }) {
+  return (
+    <a className={className} href={href} target="_blank" rel="noopener noreferrer">
+      <span aria-hidden="true">📍</span> {children}<span className="sr-only"> (opens Google Maps)</span>
+    </a>
+  );
+}
+
 /** One transport leg, used on the Travel page and inside day cards. */
 export function LegCard({ leg, showDate = true }) {
   return (
@@ -45,6 +55,7 @@ export function LegCard({ leg, showDate = true }) {
         <dt>Who</dt><dd>{leg.travelers.join(', ')}</dd>
       </dl>
       {leg.note && <p className="leg__note">{leg.note}</p>}
+      <p className="leg__map"><MapLink href={legUrl(leg)}>{legLinkLabel(leg)}</MapLink></p>
     </article>
   );
 }

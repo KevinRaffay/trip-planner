@@ -2,11 +2,13 @@ import React, { useMemo } from 'react';
 import { formatDay, dayOfMonth, dowName } from '../lib/dates.js';
 import { filtersFromQuery, dayMatches, isFiltering } from '../lib/filters.js';
 import { hrefTo } from '../lib/route.js';
-import { FilterBar, CityDot, cityOf, tagName } from './common.jsx';
+import { dayRouteUrl } from '../lib/maps.js';
+import { FilterBar, CityDot, MapLink, cityOf, tagName } from './common.jsx';
 
 export function DayCard({ data, day, route }) {
   const city = cityOf(data, day.city);
   const legs = day.legs.map((id) => data.legs.find((l) => l.id === id));
+  const route2 = dayRouteUrl(day, data.stays.find((s) => s.id === day.stay));
   return (
     <article className={`day${day.highlight ? ' day--hl' : ''}`} style={{ '--city': city.color }}>
       <a className="day__date" href={hrefTo(`/day/${day.date}`, route)} aria-label={`Open ${formatDay(day.date)}`}>
@@ -25,6 +27,7 @@ export function DayCard({ data, day, route }) {
           {data.trip.travelers.filter((p) => p.from === day.date && p.from > data.trip.start).map((p) => (
             <span key={p.name} className="tag tag--who">{p.name} joins</span>
           ))}
+          {route2 && <MapLink href={route2} className="tag tag--map">Day route</MapLink>}
         </div>
       </div>
     </article>
