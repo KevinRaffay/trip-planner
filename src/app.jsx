@@ -29,10 +29,9 @@ async function loadTrip() {
   return data;
 }
 
-function TopBar({ route, theme, onToggleTheme }) {
+function TopBar({ route }) {
   return (
     <header className="topbar">
-      <a href="#/" className="topbar__brand">Iberian Grand Tour <span className="topbar__year">2027</span></a>
       <nav className="topbar__nav" aria-label="Sections">
         {NAV.map(([name, to, label]) => (
           <a key={name} href={hrefTo(to, name === 'itinerary' || name === 'calendar' ? route : null)}
@@ -41,9 +40,6 @@ function TopBar({ route, theme, onToggleTheme }) {
           </a>
         ))}
       </nav>
-      <button type="button" className="btn btn--ghost" onClick={onToggleTheme} title="Toggle theme">
-        {theme === 'dark' ? 'Light' : 'Dark'}
-      </button>
     </header>
   );
 }
@@ -52,7 +48,7 @@ export default function App() {
   const [data, setData] = useState(null);
   const [error, setError] = useState(null);
   const route = useHashRoute();
-  const { theme, toggle } = useTheme();
+  useTheme();
 
   useEffect(() => {
     let cancelled = false;
@@ -80,7 +76,7 @@ export default function App() {
 
   return (
     <div className="app">
-      <TopBar route={route} theme={theme} onToggleTheme={toggle} />
+      <TopBar route={route} />
       <main className="main">{body}</main>
       <footer className="foot dim">
         {data ? `${data.trip.title} · ${data.trip.start} to ${data.trip.end} · estimates as of ${data.trip.asOf}` : ''}

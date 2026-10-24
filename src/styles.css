@@ -62,8 +62,6 @@ p { margin: 0 0 .75rem; }
   background: var(--navy); color: #fff;
 }
 .dark-theme .topbar { background: #0c0f18; border-bottom: 1px solid var(--border); }
-.topbar__brand { color: #fff; font-weight: 700; text-decoration: none; letter-spacing: .01em; }
-.topbar__year { color: #d6b25e; }
 .topbar__nav { display: flex; gap: 2px; flex: 1; overflow-x: auto; scrollbar-width: none; }
 .topbar__link { color: #d6dbea; text-decoration: none; padding: 6px 10px; border-radius: 8px; white-space: nowrap; font-size: .95rem; }
 .topbar__link:hover { background: rgba(255,255,255,.1); }
@@ -72,7 +70,6 @@ p { margin: 0 0 .75rem; }
 /* Buttons, fields, chips */
 .btn { display: inline-block; font: inherit; font-weight: 600; cursor: pointer; text-decoration: none; padding: 8px 14px; border-radius: 10px; border: 1px solid var(--accent); background: var(--accent); color: var(--accent-text); }
 .btn--ghost { background: transparent; color: inherit; border-color: var(--border); }
-.topbar .btn--ghost { color: #fff; border-color: rgba(255,255,255,.35); padding: 5px 12px; }
 .linkbtn { font: inherit; background: none; border: 0; padding: 0; color: var(--go); cursor: pointer; text-decoration: underline; }
 .field { font: inherit; padding: 8px 10px; border-radius: 10px; border: 1px solid var(--border); background: var(--bg-raised); color: var(--text); min-width: 0; }
 .chip { font: inherit; font-size: .88rem; cursor: pointer; padding: 5px 11px; border-radius: 999px; border: 1px solid var(--border); background: var(--bg-raised); color: var(--text); display: inline-flex; align-items: center; gap: 6px; }
