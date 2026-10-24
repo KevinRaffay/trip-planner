@@ -1,0 +1,151 @@
+{
+  "trip": {
+    "title": "The Iberian Grand Tour",
+    "subtitle": "The Lisbon Loop + Oasis UK Finale",
+    "start": "2027-05-21",
+    "end": "2027-06-16",
+    "route": "Lisbon · Porto · Madrid · Barcelona · Seville · Lisbon · London · Manchester · London",
+    "travelers": [
+      { "name": "Kevin", "from": "2027-05-21" },
+      { "name": "Michelle", "from": "2027-05-21" },
+      { "name": "Jennie", "from": "2027-06-09", "note": "Flies LAX to Heathrow overnight Jun 8, lands midday Jun 9" }
+    ],
+    "summary": "A nonstop to Lisbon opens the Iberian leg, then the Alfa Pendular up to Porto, a short flight to Madrid, the AVE to Barcelona, Seville, and a final Lisbon night. Nonstop to London on Jun 8, Avanti to Manchester for back-to-back Oasis shows at the Etihad (Fri Jun 11 and Sat Jun 12), then a 3-night London encore before flying home Jun 16.",
+    "asOf": "2026-10-24",
+    "disclaimer": "Fares and rates are researched estimates as of October 2026 for May-June 2027 travel and will vary with booking date and availability. US citizens need no visa for stays under 90 days; the EU's ETIAS authorization (about 7 EUR online) is expected to be required by 2027 - confirm before departure. Travel insurance with medical coverage recommended."
+  },
+
+  "cities": [
+    { "id": "transit", "name": "In transit", "color": "#6b7280" },
+    { "id": "lisbon", "name": "Lisbon", "color": "#d97706" },
+    { "id": "porto", "name": "Porto", "color": "#2563eb" },
+    { "id": "madrid", "name": "Madrid", "color": "#dc2626" },
+    { "id": "barcelona", "name": "Barcelona", "color": "#7c3aed" },
+    { "id": "seville", "name": "Seville", "color": "#059669" },
+    { "id": "london", "name": "London", "color": "#1c2b4f" },
+    { "id": "manchester", "name": "Manchester", "color": "#db2777" }
+  ],
+
+  "tags": [
+    { "id": "travel", "name": "Travel day" },
+    { "id": "sightseeing", "name": "Sightseeing" },
+    { "id": "food", "name": "Food & drink" },
+    { "id": "daytrip", "name": "Day trip" },
+    { "id": "concert", "name": "Oasis" },
+    { "id": "arrival", "name": "Arrival" },
+    { "id": "departure", "name": "Departure" }
+  ],
+
+  "stays": [
+    { "id": "lisbon-1", "city": "lisbon", "hotel": "The Ivens, Autograph Collection", "area": "Chiado", "checkIn": "2027-05-22", "checkOut": "2027-05-25", "nights": 3, "rate": "EUR 420-570 / night", "stars": 5, "status": "bookable", "blurb": "Explorer-themed Autograph boutique in the heart of Chiado. Santa Justa lift 6 min, Praca do Comercio 8 min on foot. 87 rooms, acclaimed Rocco restaurant and a lively gin bar. About 40-60k Bonvoy points/night." },
+    { "id": "porto", "city": "porto", "hotel": "Renaissance Porto Lapa Hotel", "area": "Lapa", "checkIn": "2027-05-25", "checkOut": "2027-05-27", "nights": 2, "rate": "EUR 180-320 / night", "stars": 5, "status": "bookable", "blurb": "Porto's newest Bonvoy flagship: rooftop 17m infinity pool and bar, full spa with indoor pool. Clerigos Tower, Livraria Lello and Casa da Musica all within walking distance." },
+    { "id": "madrid", "city": "madrid", "hotel": "The Palace, a Luxury Collection Hotel", "area": "Facing the Prado", "checkIn": "2027-05-27", "checkOut": "2027-05-31", "nights": 4, "rate": "EUR 450-650 / night", "stars": 5, "status": "bookable", "blurb": "The 1912 Belle Epoque icon with the famous stained-glass rotunda, directly across from the Prado on Plaza de Neptuno. Best-located Marriott in Madrid. Alt: W Madrid (Canalejas) or the Madrid EDITION." },
+    { "id": "barcelona", "city": "barcelona", "hotel": "Cotton House Hotel, Autograph Collection", "area": "Gran Via / Passeig de Gracia", "checkIn": "2027-05-31", "checkOut": "2027-06-04", "nights": 4, "rate": "EUR 550-650 / night", "stars": 5, "status": "bookable", "blurb": "19th-century Cotton Guild headquarters with a famous spiral staircase, L'Atelier terrace and garden restaurant. Casa Batllo is four blocks up. Alt: Le Meridien Barcelona (La Rambla) or the Barcelona EDITION." },
+    { "id": "seville", "city": "seville", "hotel": "Querencia de Sevilla, Autograph Collection", "area": "Opposite the Cathedral", "checkIn": "2027-06-04", "checkOut": "2027-06-07", "nights": 3, "rate": "EUR 260-420 / night", "stars": 4, "status": "bookable", "blurb": "Design boutique directly opposite the Gothic Cathedral, arguably the best address in Seville. Rooftop with Giralda views. Splurge alt: Hotel Alfonso XIII, Luxury Collection (post-Feria May rates EUR 550-850)." },
+    { "id": "lisbon-2", "city": "lisbon", "hotel": "The Ivens, Autograph Collection", "area": "Chiado", "checkIn": "2027-06-07", "checkOut": "2027-06-08", "nights": 1, "rate": "EUR 420-570 / night", "stars": 5, "status": "bookable", "blurb": "One familiar night before the UK leg: 15-minute taxi to the airport for the morning flight to London." },
+    { "id": "london-1", "city": "london", "hotel": "London Marriott County Hall", "area": "South Bank, facing Big Ben", "checkIn": "2027-06-08", "checkOut": "2027-06-10", "nights": 2, "rate": "GBP 350-550 / night", "stars": 5, "status": "bookable", "blurb": "Grade II-listed 1922 County Hall on the South Bank. Rooms look across Westminster Bridge at Big Ben; 25m indoor pool, Gillray's Steakhouse, Waterloo station 3 minutes away. Jennie gets her own room from Jun 9. Alt: JW Marriott Grosvenor House." },
+    { "id": "manchester", "city": "manchester", "hotel": "Kimpton Clocktower Hotel", "area": "Oxford Street", "checkIn": "2027-06-10", "checkOut": "2027-06-13", "nights": 3, "rate": "GBP 1,391 total", "stars": 5, "status": "booked", "blurb": "Victorian Refuge Assurance building with a landmark clock tower and grand tiled lobby. 10-minute walk from Piccadilly station, steps from Oxford Road station and St Peter's Square tram stop for the Metrolink to the Etihad. One 2 Double Premium room for all three. Check-in 3 PM, check-out 12 PM; free cancellation until 7 days before arrival (Jun 3)." },
+    { "id": "london-2", "city": "london", "hotel": "London Marriott County Hall", "area": "South Bank, facing Big Ben", "checkIn": "2027-06-13", "checkOut": "2027-06-16", "nights": 3, "rate": "GBP 350-550 / night", "stars": 5, "status": "bookable", "blurb": "Return stay at County Hall before flying home from Heathrow on Jun 16." }
+  ],
+
+  "legs": [
+    { "id": "air-lax-lis", "mode": "air", "date": "2027-05-21", "from": "Los Angeles (LAX)", "to": "Lisbon (LIS)", "carrier": "TAP Air Portugal TP248", "cls": "Business", "depart": "4:30 PM (LAX Terminal B)", "arrive": "11:30 AM May 22 (Lisbon Terminal 1)", "duration": "11h 00m", "fare": "Booked", "status": "booked", "travelers": ["Kevin", "Michelle"], "note": "Nonstop, lie-flat overnight. 2 checked bags each (23 kg). Add Known Traveler numbers and meal preferences in Manage Booking." },
+    { "id": "train-lis-opo", "mode": "train", "date": "2027-05-25", "from": "Lisboa Oriente", "to": "Porto Campanha", "carrier": "CP Alfa Pendular", "cls": "First class", "duration": "~2h 50m", "fare": "EUR 30-45", "status": "bookable", "travelers": ["Kevin", "Michelle"], "note": "Morning departure." },
+    { "id": "air-opo-mad", "mode": "air", "date": "2027-05-27", "from": "Porto (OPO)", "to": "Madrid (MAD)", "carrier": "Iberia / easyJet", "cls": "Economy", "duration": "1h 15m", "fare": "EUR 60-180", "status": "bookable", "travelers": ["Kevin", "Michelle"], "note": "Nonstop. Schedules are loaded; early fares EUR 60-80." },
+    { "id": "train-mad-tol", "mode": "train", "date": "2027-05-30", "from": "Madrid Atocha", "to": "Toledo", "carrier": "AVE (day trip)", "cls": "Standard", "duration": "33 min each way", "fare": "Day-trip rail", "status": "bookable", "travelers": ["Kevin", "Michelle"], "note": "Round-trip day trip: cathedral, El Greco, medieval lanes." },
+    { "id": "train-mad-bcn", "mode": "train", "date": "2027-05-31", "from": "Madrid Atocha", "to": "Barcelona Sants", "carrier": "Renfe AVE", "cls": "Premium / first class", "duration": "2h 30m", "fare": "EUR 90-180 (early booking saves 50%+)", "status": "opens-later", "opens": "Feb-Mar 2027", "travelers": ["Kevin", "Michelle"], "note": "Renfe releases about 2-4 months ahead; book at opening for 50%+ savings." },
+    { "id": "air-bcn-svq", "mode": "air", "date": "2027-06-04", "from": "Barcelona (BCN)", "to": "Seville (SVQ)", "carrier": "Vueling or Iberia", "cls": "Economy", "duration": "~1h 45m", "fare": "EUR 60-170", "status": "opens-later", "opens": "Nov-Dec 2026", "travelers": ["Kevin", "Michelle"], "note": "Nonstop. Vueling calendar loads about 6 months out for late-May dates." },
+    { "id": "train-svq-cor", "mode": "train", "date": "2027-06-06", "from": "Sevilla Santa Justa", "to": "Cordoba", "carrier": "AVE / Avant (day trip)", "cls": "Standard", "duration": "45 min (~38 trains daily)", "fare": "EUR 7-30 each way", "status": "bookable", "travelers": ["Kevin", "Michelle"], "note": "Round-trip day trip, back in Seville by early evening." },
+    { "id": "air-svq-lis", "mode": "air", "date": "2027-06-07", "from": "Seville (SVQ)", "to": "Lisbon (LIS)", "carrier": "TAP", "cls": "Economy", "duration": "1h 10m", "fare": "EUR 50-150", "status": "bookable", "travelers": ["Kevin", "Michelle"], "note": "Evening flight. Portugal is 1 hour behind Spain, so you gain an hour." },
+    { "id": "air-lis-lhr", "mode": "air", "date": "2027-06-08", "from": "Lisbon (LIS)", "to": "London Heathrow (LHR)", "carrier": "TAP / BA / easyJet", "cls": "Economy", "duration": "~2h 45m", "fare": "EUR 80-250", "status": "bookable", "travelers": ["Kevin", "Michelle"], "note": "Morning nonstop, many departures daily. Arrive early afternoon." },
+    { "id": "air-jennie", "mode": "air", "date": "2027-06-08", "from": "Los Angeles (LAX)", "to": "London Heathrow (LHR)", "carrier": "BA / Virgin / AA / Delta", "cls": "Business", "duration": "~10h 15m overnight", "arrive": "Midday Jun 9", "fare": "One-way $2,500-5,000 (or miles)", "status": "bookable", "travelers": ["Jennie"], "note": "Book soon. US-originating one-ways can price close to a round trip in cash, so check award space on miles first." },
+    { "id": "train-lon-man", "mode": "train", "date": "2027-06-10", "from": "London Euston", "to": "Manchester Piccadilly", "carrier": "Avanti West Coast", "cls": "Advance return", "duration": "2h 07m (every ~20 min)", "fare": "GBP 40-120 advance return", "status": "opens-later", "opens": "~Mar 2027", "travelers": ["Kevin", "Michelle", "Jennie"], "note": "Late-morning train. Advance fares open about 12 weeks ahead and are cheapest at release; trains around the show weekend fill fast." },
+    { "id": "train-man-lon", "mode": "train", "date": "2027-06-13", "from": "Manchester Piccadilly", "to": "London Euston", "carrier": "Avanti West Coast", "cls": "Return leg", "duration": "2h 07m", "fare": "Included in return above", "status": "opens-later", "opens": "~Mar 2027", "travelers": ["Kevin", "Michelle", "Jennie"], "note": "Back in London by midday." },
+    { "id": "train-man-liv", "mode": "train", "date": "2027-06-12", "from": "Manchester", "to": "Liverpool", "carrier": "Rail (optional half-day)", "cls": "Standard", "duration": "~50 min", "fare": "Optional", "status": "optional", "travelers": ["Kevin", "Michelle", "Jennie"], "note": "Beatles story at Albert Dock; back for the Saturday show." },
+    { "id": "train-lon-wnd", "mode": "train", "date": "2027-06-14", "from": "London", "to": "Windsor", "carrier": "Rail (optional day trip)", "cls": "Standard", "duration": "~1h", "fare": "Optional", "status": "optional", "travelers": ["Kevin", "Michelle", "Jennie"], "note": "Windsor Castle, or Greenwich by riverboat instead." },
+    { "id": "air-lhr-lax", "mode": "air", "date": "2027-06-16", "from": "London Heathrow (LHR)", "to": "Los Angeles (LAX)", "carrier": "BA / Virgin / AA / Delta", "cls": "Business", "duration": "~11h", "arrive": "Early afternoon, same day", "fare": "Booked with miles", "status": "booked", "travelers": ["Kevin", "Michelle", "Jennie"], "note": "Award seats on miles, all three together; award taxes already paid. Add seat assignments and Known Traveler numbers. Heathrow Express from Paddington (15 min) or a pre-booked car." }
+  ],
+
+  "days": [
+    { "date": "2027-05-21", "city": "transit", "title": "Depart LAX", "tags": ["travel", "departure"], "legs": ["air-lax-lis"], "plan": "Depart LAX 4:30 PM (Terminal B) on TAP TP248; dinner and lie-flat sleep aboard." },
+    { "date": "2027-05-22", "city": "lisbon", "stay": "lisbon-1", "title": "Arrive Lisbon", "tags": ["arrival", "sightseeing", "food"], "legs": [], "plan": "Arrive 11:30 AM. Metro or taxi to Chiado. Gentle first evening: sunset at Miradouro de Santa Catarina, dinner in Chiado." },
+    { "date": "2027-05-23", "city": "lisbon", "stay": "lisbon-1", "title": "Belem", "tags": ["sightseeing", "food"], "legs": [], "plan": "Belem morning: Jeronimos Monastery, Belem Tower, warm pasteis de nata at the 1837 bakery. Afternoon MAAT or the Coach Museum." },
+    { "date": "2027-05-24", "city": "lisbon", "stay": "lisbon-1", "title": "Alfama and Fado", "tags": ["sightseeing", "food"], "legs": [], "plan": "Alfama and Sao Jorge Castle by tuk-tuk or Tram 28; Fado dinner in Bairro Alto, a short stroll uphill from Chiado." },
+    { "date": "2027-05-25", "city": "porto", "stay": "porto", "title": "Train to Porto", "tags": ["travel", "sightseeing"], "legs": ["train-lis-opo"], "plan": "Morning Alfa Pendular from Lisboa Oriente (~2h50, first class). Afternoon in the Ribeira's riverfront lanes, then across the Dom Luis I bridge for a port-lodge tasting in Vila Nova de Gaia." },
+    { "date": "2027-05-26", "city": "porto", "stay": "porto", "title": "Porto highlights", "tags": ["sightseeing", "food"], "legs": [], "plan": "Sao Bento station's azulejo hall, Livraria Lello and Clerigos Tower; lunch at Mercado do Bolhao; afternoon six-bridges Douro cruise; sunset at the rooftop infinity pool." },
+    { "date": "2027-05-27", "city": "madrid", "stay": "madrid", "title": "Fly to Madrid", "tags": ["travel", "sightseeing", "food"], "legs": ["air-opo-mad"], "plan": "Morning nonstop from Porto to Madrid (1h15). Cercanias train to Atocha; the hotel faces the Neptune fountain, 6 minutes away. Afternoon: Retiro Park and the Crystal Palace; tapas on Cava Baja." },
+    { "date": "2027-05-28", "city": "madrid", "stay": "madrid", "title": "Prado and Thyssen", "tags": ["sightseeing"], "legs": [], "plan": "The Prado with a pre-booked guide (Velazquez, Goya); afternoon Thyssen-Bornemisza. Both are directly across the street from The Palace." },
+    { "date": "2027-05-29", "city": "madrid", "stay": "madrid", "title": "Royal Palace and flamenco", "tags": ["sightseeing"], "legs": [], "plan": "Royal Palace and Almudena Cathedral. Evening flamenco at Corral de la Moreria." },
+    { "date": "2027-05-30", "city": "madrid", "stay": "madrid", "title": "Toledo day trip", "tags": ["daytrip", "sightseeing"], "legs": ["train-mad-tol"], "plan": "Toledo day trip by AVE from Atocha (33 min each way): cathedral, El Greco, medieval lanes." },
+    { "date": "2027-05-31", "city": "barcelona", "stay": "barcelona", "title": "AVE to Barcelona", "tags": ["travel", "sightseeing"], "legs": ["train-mad-bcn"], "plan": "Morning AVE to Barcelona (2h30, first class). Metro L3 to Passeig de Gracia; afternoon on the boulevard. Casa Batllo is four blocks from the Cotton House." },
+    { "date": "2027-06-01", "city": "barcelona", "stay": "barcelona", "title": "Sagrada Familia and Park Guell", "tags": ["sightseeing", "food"], "legs": [], "plan": "Sagrada Familia with early timed entry, then Park Guell. Evening seafood in Barceloneta." },
+    { "date": "2027-06-02", "city": "barcelona", "stay": "barcelona", "title": "Gothic Quarter and Picasso", "tags": ["sightseeing", "food"], "legs": [], "plan": "Gothic Quarter and the Picasso Museum; La Boqueria market lunch; sunset drink on the Cotton House's L'Atelier terrace." },
+    { "date": "2027-06-03", "city": "barcelona", "stay": "barcelona", "title": "Montserrat or Montjuic", "tags": ["sightseeing", "daytrip"], "legs": [], "plan": "Choose: Montserrat by train + rack railway from Placa Espanya, or Montjuic cable car and MNAC." },
+    { "date": "2027-06-04", "city": "seville", "stay": "seville", "title": "Fly to Seville", "tags": ["travel", "sightseeing"], "legs": ["air-bcn-svq"], "plan": "Nonstop flight to Seville (~1h45); EA bus or taxi; the hotel faces the Cathedral. Evening paseo through Santa Cruz's lanes." },
+    { "date": "2027-06-05", "city": "seville", "stay": "seville", "title": "Alcazar and flamenco", "tags": ["sightseeing"], "legs": [], "plan": "Real Alcazar early with a private guide, then the Cathedral and (optional) Giralda climb, literally across the street from the hotel. Evening flamenco at a Triana tablao." },
+    { "date": "2027-06-06", "city": "seville", "stay": "seville", "title": "Cordoba day trip", "tags": ["daytrip", "sightseeing", "food"], "legs": ["train-svq-cor"], "plan": "AVE/Avant from Santa Justa (45 min, ~38 trains daily, EUR 7-30 pp each way). Morning inside the Mezquita-Catedral before the crowds, wander the Jewish Quarter and cross the Roman bridge; lunch on salmorejo in a patio restaurant. Back in Seville by early evening for a farewell tapas crawl." },
+    { "date": "2027-06-07", "city": "lisbon", "stay": "lisbon-2", "title": "Back to Lisbon", "tags": ["travel", "food"], "legs": ["air-svq-lis"], "plan": "Plaza de Espana and Maria Luisa Park in the morning cool; last tapas lunch in Santa Cruz. Late-afternoon TAP hop to Lisbon (1h10; gain an hour). Check in at The Ivens; farewell dinner at Rocco and a last glass of vinho verde." },
+    { "date": "2027-06-08", "city": "london", "stay": "london-1", "title": "Fly to London", "tags": ["travel", "sightseeing"], "legs": ["air-lis-lhr", "air-jennie"], "plan": "Morning nonstop to London Heathrow (~2h45). Arrive early afternoon; Heathrow Express + taxi to County Hall. Evening walk along the South Bank; the London Eye is at the doorstep. Jennie departs LAX tonight." },
+    { "date": "2027-06-09", "city": "london", "stay": "london-1", "title": "Jennie arrives", "tags": ["arrival", "sightseeing"], "legs": [], "plan": "Morning: Westminster Abbey and the Churchill War Rooms, both just over the bridge. Jennie lands midday and joins you at County Hall; celebratory West End theatre night, the three of you." },
+    { "date": "2027-06-10", "city": "manchester", "stay": "manchester", "title": "Train to Manchester", "tags": ["travel", "sightseeing", "food"], "legs": ["train-lon-man"], "plan": "Late-morning Avanti from Euston (2h07); drop bags at the Kimpton Clocktower (check-in from 3 PM), a 10-minute walk from Piccadilly. Afternoon: Science and Industry Museum or a Man City stadium tour; dinner in Spinningfields." },
+    { "date": "2027-06-11", "city": "manchester", "stay": "manchester", "title": "OASIS - Night one", "tags": ["concert", "sightseeing", "food"], "legs": [], "highlight": true, "plan": "OASIS AT THE ETIHAD, NIGHT ONE. Easy day in the Northern Quarter: record shops, cafes, Oasis's old stomping ground. Early dinner, then Metrolink to Etihad Campus." },
+    { "date": "2027-06-12", "city": "manchester", "stay": "manchester", "title": "OASIS - Night two", "tags": ["concert", "daytrip"], "legs": ["train-man-liv"], "highlight": true, "plan": "OASIS AT THE ETIHAD, NIGHT TWO. Recover slowly; optional Liverpool half-day (~50 min by train, Beatles story at Albert Dock). Back for the Saturday show." },
+    { "date": "2027-06-13", "city": "london", "stay": "london-2", "title": "Back to London", "tags": ["travel", "sightseeing", "food"], "legs": ["train-man-lon"], "plan": "Avanti back to Euston by midday. Proper Sunday roast; lazy afternoon at the National Gallery or along the South Bank." },
+    { "date": "2027-06-14", "city": "london", "stay": "london-2", "title": "Windsor or Greenwich", "tags": ["daytrip", "sightseeing"], "legs": ["train-lon-wnd"], "plan": "Day trip: Windsor Castle (~1h), or Greenwich by riverboat." },
+    { "date": "2027-06-15", "city": "london", "stay": "london-2", "title": "Tower and farewell dinner", "tags": ["sightseeing", "food"], "legs": [], "plan": "Tower of London early, then Borough Market for lunch. Farewell dinner at Gillray's overlooking the Thames." },
+    { "date": "2027-06-16", "city": "london", "stay": "london-2", "title": "Fly home", "tags": ["travel", "departure"], "legs": ["air-lhr-lax"], "plan": "Heathrow Express from Paddington (or pre-booked car); all three of you on the nonstop to LAX (~11h), landing early afternoon the same day." }
+  ],
+
+  "transitNotes": [
+    { "place": "Lisbon airport to Chiado", "text": "Metro red line to Sao Sebastiao, blue line to Baixa-Chiado (~30 min, ~EUR 1.85), or a EUR 15 taxi after the overnight flight." },
+    { "place": "Madrid Barajas to Sol / The Palace", "text": "Cercanias C1/C10 commuter train or Metro L8 (~30-40 min, EUR 3-5). The Palace is a 6-minute walk from Atocha (Cercanias stops there too)." },
+    { "place": "Madrid Atocha (for the AVE)", "text": "6-minute walk from the hotel." },
+    { "place": "Barcelona Sants to Cotton House", "text": "Metro L3 to Passeig de Gracia, ~12 min." },
+    { "place": "Barcelona airport", "text": "Aerobus (EUR 7.25, every 5 min) or Metro L9." },
+    { "place": "Seville airport to center", "text": "EA airport bus, EUR 4, ~35 min." },
+    { "place": "London", "text": "Contactless Tube and buses. For the concert: Metrolink tram from Piccadilly to Etihad Campus (~15 min) or a 25-minute walk - allow generous time back with ~60,000 fans. In Manchester, Metrolink trams and short cabs cover everything." },
+    { "place": "Heathrow", "text": "Heathrow Express (15 min from Paddington) or a pre-booked car on departure day." },
+    { "place": "Anywhere on this route", "text": "Taxis run EUR 10-35 - a painless fallback with luggage." }
+  ],
+
+  "bookings": [
+    { "what": "TAP TP248 Los Angeles to Lisbon", "when": "Fri May 21, 2027", "detail": "Business for Kevin and Michelle. Dep 4:30 PM (LAX Terminal B), arr 11:30 AM May 22 (Lisbon Terminal 1). 11h 00m. 2 checked bags each (23 kg).", "status": "confirmed" },
+    { "what": "Kimpton Clocktower Hotel, Manchester", "when": "Jun 10-13, 2027", "detail": "1 room, 2 Double Premium, 3 adults. Flexible Saver Member rate, GBP 1,391.27 total. Check-in 3 PM / out 12 PM. Free cancellation until 7 days before arrival.", "status": "confirmed" },
+    { "what": "Heathrow to Los Angeles", "when": "Wed Jun 16, 2027", "detail": "Business award on miles for Kevin, Michelle and Jennie.", "status": "confirmed" }
+  ],
+
+  "bookingSequence": [
+    { "item": "Oasis tickets, Etihad Fri Jun 11 + Sat Jun 12", "bookable": "YES - DO THIS FIRST", "when": "now", "note": "Six tickets: three seats for each of the two shows. The hardest-to-get items in the trip. Official channels / face-value resale; the Tue Jun 8 and Tue Jun 15 shows are backups that still fit the trip frame." },
+    { "item": "Manchester hotel, Jun 10-13", "bookable": "BOOKED", "when": "done", "note": "Kimpton Clocktower. Free cancellation until Jun 3; after that the first night is charged." },
+    { "item": "TAP Los Angeles to Lisbon (business)", "bookable": "BOOKED", "when": "done", "note": "Add Known Traveler numbers and meal preferences in Manage Booking." },
+    { "item": "Heathrow to Los Angeles, Jun 16 x3", "bookable": "BOOKED", "when": "done", "note": "Award seats on miles for all three. Add seat assignments and Known Traveler numbers now." },
+    { "item": "Jennie's LAX to Heathrow one-way, Jun 8", "bookable": "YES - BOOK SOON", "when": "now", "note": "Nonstops on BA/Virgin/AA/United. US-originating one-ways can price close to a round trip in cash, so check award space on miles first." },
+    { "item": "All other hotels", "bookable": "YES", "when": "now", "note": "Marriott.com takes late-May 2027 bookings now - use flexible member rates and rebook if prices drop." },
+    { "item": "Lisbon-Madrid + Seville-Lisbon (TAP/Iberia)", "bookable": "YES", "when": "now", "note": "Schedules loaded; early fares EUR 60-80." },
+    { "item": "Lisbon to London flights", "bookable": "YES", "when": "now", "note": "Multiple nonstops daily (TAP, BA, easyJet) - no scarcity; book with the other flights." },
+    { "item": "Vueling Barcelona to Seville", "bookable": "~NOV-DEC 2026", "when": "Nov-Dec 2026", "note": "Calendar loads ~6 months out for late-May dates." },
+    { "item": "AVE Madrid to Barcelona", "bookable": "~FEB-MAR 2027", "when": "Feb-Mar 2027", "note": "Renfe releases ~2-4 months ahead; book at opening for 50%+ savings." },
+    { "item": "Avanti London-Manchester", "bookable": "~MAR 2027", "when": "Mar 2027", "note": "Advance fares open ~12 weeks ahead - cheapest at release; trains around the show weekend fill fast." },
+    { "item": "Sagrada Familia, Alcazar guide, flamenco, West End theatre, restaurants", "bookable": "MAR-APR 2027", "when": "Mar-Apr 2027", "note": "Timed entries and reservations." }
+  ],
+
+  "costs": [
+    { "item": "Air out - Business (Kevin & Michelle)", "detail": "TAP TP248 LAX-Lisbon, booked ($3,174.50 each per receipt)", "estimate": "$6,349" },
+    { "item": "Air home - Business (all three)", "detail": "Heathrow-LAX Jun 16, booked with miles (award taxes already paid)", "estimate": "Paid" },
+    { "item": "Jennie's one-way LAX-London - Business", "detail": "Nonstop, overnight Jun 8, lands Jun 9", "estimate": "$2,500 - $5,000" },
+    { "item": "Train, Lisbon-Porto", "detail": "Alfa Pendular first class, 2 seats", "estimate": "$70 - $100" },
+    { "item": "Flight, Porto-Madrid", "detail": "Iberia/easyJet economy, 2 seats", "estimate": "$130 - $400" },
+    { "item": "AVE train, Madrid-Barcelona", "detail": "First class, 2 seats", "estimate": "$200 - $400" },
+    { "item": "Flight, Barcelona-Seville", "detail": "Vueling/Iberia economy, 2 seats", "estimate": "$130 - $370" },
+    { "item": "Flight, Seville-Lisbon", "detail": "TAP economy, 2 seats", "estimate": "$110 - $330" },
+    { "item": "Flight, Lisbon-London", "detail": "TAP/BA/easyJet economy incl. bags, 2 seats", "estimate": "$180 - $500" },
+    { "item": "UK trains", "detail": "Avanti London-Manchester return + Windsor/Liverpool day trips, 2 seats", "estimate": "$200 - $450" },
+    { "item": "Hotels - Iberia, 17 nights", "detail": "All Marriott, under $700/night", "estimate": "$7,600 - $10,600" },
+    { "item": "Hotels - London", "detail": "County Hall: your room x 5 nights, Jennie's room x 4 nights", "estimate": "$4,200 - $6,600" },
+    { "item": "Hotel - Manchester", "detail": "Kimpton Clocktower, 1 room x 3 nights, booked (GBP 1,391.27)", "estimate": "~$1,850" },
+    { "item": "Oasis tickets x 6 (two shows, three seats each)", "detail": "Face value to premium/resale, category dependent", "estimate": "$1,200 - $4,800+" },
+    { "item": "Public transport & day-trip trains", "detail": "Metro, airport buses, plus Toledo and Cordoba rail for two", "estimate": "$250 - $350" }
+  ],
+  "costTotal": "$25,000 - $38,100 (excl. meals, guides, incidentals)",
+  "costNote": "The scarce item now is the six concert tickets. The Manchester hotel is locked in for the show weekend, and everything else on this trip is abundant."
+}

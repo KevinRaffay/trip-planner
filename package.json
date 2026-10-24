@@ -1,0 +1,24 @@
+{
+  "name": "trip-planner",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Static trip itinerary, calendar and travel planner for the Iberian Grand Tour (May 21 - Jun 16, 2027).",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "check-data": "node scripts/check-data.js"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.1",
+    "vite": "^5.4.0"
+  }
+}

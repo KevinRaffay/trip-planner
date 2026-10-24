@@ -1,0 +1,54 @@
+# Deploy the static trip planner to GitHub Pages.
+#
+# The `build` job installs, validates public/trip.json and builds, and needs no
+# Pages access, so it gives a CI signal on every push and pull request. Only
+# `deploy` touches Pages, and only runs on main. One-time setup: repo Settings >
+# Pages > Source: "GitHub Actions".
+
+name: Deploy static app
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Validate trip data
+        run: npm run check-data
+      - name: Build
+        env:
+          TRIP_BASE: /trip-planner/
+        run: npm run build
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+  deploy:
+    if: github.ref == 'refs/heads/main'
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
