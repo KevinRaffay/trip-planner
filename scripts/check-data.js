@@ -1,6 +1,7 @@
 import fs from 'node:fs';
 import { validateTrip } from '../src/lib/validate.js';
 import { placeUrl, dayRouteUrl, legUrl } from '../src/lib/maps.js';
+import { myMapsRows, myMapsCsv } from '../src/lib/mymaps.js';
 
 const trip = JSON.parse(fs.readFileSync(new URL('../public/trip.json', import.meta.url), 'utf8'));
 const problems = validateTrip(trip);
@@ -26,6 +27,15 @@ if (!problems.length) {
     if (route) { check(`${d.date} route`, route); links += 1; }
   }
   console.log(`maps links OK: ${links}`);
+
+  // My Maps export: one row per unique query, none lost, CSV is one line per row.
+  const queries = new Set([...trip.stays.map((s) => s.query), ...trip.days.flatMap((d) => (d.places ?? []).map((p) => p.query))]);
+  const rows = myMapsRows(trip);
+  if (rows.length !== queries.size) problems.push(`my-maps export: ${rows.length} rows for ${queries.size} unique places`);
+  for (const r of rows) if (!r.Name || !r.Address) problems.push(`my-maps export: row missing name or address (${JSON.stringify(r)})`);
+  const lines = myMapsCsv(trip).trim().split('\r\n');
+  if (lines.length !== rows.length + 1) problems.push(`my-maps export: CSV has ${lines.length} lines for ${rows.length} rows`);
+  console.log(`my-maps export OK: ${rows.length} places`);
 }
 
 if (problems.length) {
