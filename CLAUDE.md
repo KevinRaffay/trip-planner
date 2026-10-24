@@ -26,6 +26,9 @@ On Windows Git Bash, set `MSYS_NO_PATHCONV=1` when passing `TRIP_BASE=/trip-plan
 ## Google Maps
 Deep links only (Maps URLs API): `src/lib/maps.js` builds `https://www.google.com/maps/search|dir/?api=1...` links from data. **No API key, no Maps JS/Embed SDK** — nothing billable or secret ships in this public bundle. Data: `stays[].query` (hotel search text) and `days[].places[]` (`{name, query}`, in visit order, max 8). Legs need no extra fields: trains link transit directions `from`→`to`, flights link the arrival airport. Day routes walk from that night's hotel; `daytrip` days start at the first stop (the hotel is in another town). `check-data` builds every link and asserts it is a well-formed Maps URL. An interactive map would need per-place lat/lng and a referrer-restricted key (or Leaflet/OSM) — not built.
 
+### Google My Maps export
+`src/lib/mymaps.js` builds a CSV in the browser (Plan page button): one row per unique hotel/sight (`Name, Address, Type, City, Days, Date, Description`), deduped by map query (a place visited on two days is one row listing both). My Maps geocodes the `Address` column, so no lat/lng is stored. Import is manual and one-way (My Maps does not sync); flights/trains are not drawn. `check-data` asserts no place is lost and the CSV has one line per row.
+
 ## Invariants
 1. **The site is public. No booking references, confirmation numbers or seat numbers in `trip.json`, source or docs.** Status ("Confirmed") and non-identifying detail only. `validate.js` pattern-checks for this; the patterns deliberately do not contain the real values.
 2. Every leg must be dated inside the trip, listed on its own day, and use known travelers; stays' `nights` must span check-in to check-out (enforced by `check-data`).
@@ -38,5 +41,6 @@ Deep links only (Maps URLs API): `src/lib/maps.js` builds `https://www.google.co
 - v0.2: Google Maps deep links on Day detail (places, day route, hotel), Itinerary cards (day route), Hotels, and Travel legs. Verified in the dev preview (hrefs decoded, 375px, dark); not yet clicked through on the deployed site.
 - v0.3: header is just the section nav. The brand label and the Light/Dark button were removed on request; there is no theme toggle (`src/theme.js` only follows the OS setting, so a phone set to dark still shows the dark palette).
 - v0.4: header nav is a hamburger at <=640px (shows the current section, lists every item, closes on navigate / Escape / outside tap); wider screens keep the inline links, which wrap rather than scroll. Add new sections to `NAV` in `src/app.jsx` and they appear in both.
+- v0.5: Plan page "Download CSV for My Maps" (65 places). Output checked in the preview; the actual My Maps import was not run (needs a Google account), so confirm the pins land correctly on first use.
 - Source: `iberian_grand_tour_lisbon_loop_2027.pdf` (as of 2026-10-24). Fares/rates are estimates.
 - Pages: repo Settings → Pages → Source must be "GitHub Actions".
