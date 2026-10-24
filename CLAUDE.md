@@ -37,5 +37,6 @@ Deep links only (Maps URLs API): `src/lib/maps.js` builds `https://www.google.co
 - v0.1: all views built and verified in the dev preview (desktop + 375px, light + dark, no horizontal overflow, filters drive Itinerary and Calendar). Service worker file is syntax-checked and served but its registration was not exercised in the Claude browser pane (the pane refused to fetch it); confirm on the deployed site.
 - v0.2: Google Maps deep links on Day detail (places, day route, hotel), Itinerary cards (day route), Hotels, and Travel legs. Verified in the dev preview (hrefs decoded, 375px, dark); not yet clicked through on the deployed site.
 - v0.3: header is just the section nav. The brand label and the Light/Dark button were removed on request; there is no theme toggle (`src/theme.js` only follows the OS setting, so a phone set to dark still shows the dark palette).
+- v0.4: header nav is a hamburger at <=640px (shows the current section, lists every item, closes on navigate / Escape / outside tap); wider screens keep the inline links, which wrap rather than scroll. Add new sections to `NAV` in `src/app.jsx` and they appear in both.
 - Source: `iberian_grand_tour_lisbon_loop_2027.pdf` (as of 2026-10-24). Fares/rates are estimates.
 - Pages: repo Settings → Pages → Source must be "GitHub Actions".
