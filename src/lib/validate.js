@@ -1,4 +1,5 @@
 import { addDays } from './dates.js';
+import { MAX_PLACES_PER_DAY } from './maps.js';
 
 // Shared by the browser (loadTrip) and scripts/check-data.js, so a bad
 // trip.json fails the same way locally, in CI and on the page.
@@ -28,6 +29,9 @@ export function validateTrip(t) {
     for (const g of d.tags) need(tagIds.has(g), `${d.date}: unknown tag "${g}"`);
     for (const id of d.legs) need(legIds.has(id), `${d.date}: unknown leg "${id}"`);
     need(d.title && d.plan, `${d.date}: title and plan are required`);
+    const places = d.places ?? [];
+    need(places.length <= MAX_PLACES_PER_DAY, `${d.date}: ${places.length} places, max ${MAX_PLACES_PER_DAY} (Google caps route waypoints)`);
+    for (const p of places) need(p.name && p.query, `${d.date}: every place needs a name and a query`);
   }
   need(addDays(expect, -1) === t.trip.end, `days end at ${addDays(expect, -1)}, trip.end is ${t.trip.end}`);
 
@@ -44,6 +48,7 @@ export function validateTrip(t) {
   // Stays: nights add up and cover the dates.
   for (const s of t.stays) {
     need(cityIds.has(s.city), `${s.id}: unknown city "${s.city}"`);
+    need(s.query, `${s.id}: stay needs a map query`);
     need(addDays(s.checkIn, s.nights) === s.checkOut, `${s.id}: ${s.nights} nights does not span ${s.checkIn} to ${s.checkOut}`);
   }
 

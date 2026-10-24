@@ -148,6 +148,15 @@ p { margin: 0 0 .75rem; }
 .segmented__btn { font: inherit; border: 0; background: transparent; color: var(--text); padding: 6px 14px; border-radius: 8px; cursor: pointer; }
 .segmented__btn--on { background: var(--accent); color: var(--accent-text); font-weight: 600; }
 
+/* Maps links */
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.maplink { font-size: .9rem; }
+.leg__map { margin: 10px 0 0; }
+.tag--map { color: var(--go); text-decoration: none; font-weight: 600; }
+.tag--map:hover { background: var(--bg-raised); }
+.places { margin: 0 0 12px; padding: 0; list-style: none; display: flex; flex-wrap: wrap; gap: 6px 16px; }
+a.btn { color: var(--accent-text); }
+
 /* Calendar */
 .cal { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 4px; }
 .cal__dow { text-align: center; font-size: .75rem; color: var(--muted); text-transform: uppercase; padding: 4px 0; }

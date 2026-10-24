@@ -1,6 +1,7 @@
 import React from 'react';
 import { formatDay } from '../lib/dates.js';
-import { CityDot, cityOf } from './common.jsx';
+import { placeUrl } from '../lib/maps.js';
+import { CityDot, MapLink, cityOf } from './common.jsx';
 
 export default function Hotels({ data }) {
   return (
@@ -21,6 +22,7 @@ export default function Hotels({ data }) {
               <dt>Class</dt><dd>{'★'.repeat(s.stars)}</dd>
             </dl>
             <p className="leg__note">{s.blurb}</p>
+            <p className="leg__map"><MapLink href={placeUrl(s.query)}>Open in Maps</MapLink></p>
           </article>
         ))}
       </div>

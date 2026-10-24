@@ -2,7 +2,8 @@ import React from 'react';
 import { addDays, formatDay, diffDays } from '../lib/dates.js';
 import { travelersOn } from '../lib/filters.js';
 import { hrefTo } from '../lib/route.js';
-import { CityDot, LegCard, cityOf, tagName } from './common.jsx';
+import { placeUrl, dayRouteUrl } from '../lib/maps.js';
+import { CityDot, LegCard, MapLink, cityOf, tagName } from './common.jsx';
 
 export default function DayDetail({ data, date, route }) {
   const day = data.days.find((d) => d.date === date);
@@ -25,6 +26,16 @@ export default function DayDetail({ data, date, route }) {
       <p className="lead">{day.plan}</p>
       <p className="dim">With: {travelersOn(data.trip, date).join(', ')}</p>
 
+      {day.places?.length > 0 && (
+        <div className="block">
+          <h2>Places</h2>
+          <ul className="places">
+            {day.places.map((p) => <li key={p.query}><MapLink href={placeUrl(p.query)}>{p.name}</MapLink></li>)}
+          </ul>
+          <p><MapLink href={dayRouteUrl(day, stay)} className="btn">Route for the day</MapLink></p>
+        </div>
+      )}
+
       {legs.length > 0 && (
         <div className="block"><h2>Getting around</h2><div className="grid">{legs.map((l) => <LegCard key={l.id} leg={l} showDate={false} />)}</div></div>
       )}
@@ -36,6 +47,7 @@ export default function DayDetail({ data, date, route }) {
             <h3 className="leg__route">{stay.hotel}</h3>
             <p className="dim">{stay.area} · {formatDay(stay.checkIn)} → {formatDay(stay.checkOut)} · {stay.rate}</p>
             <p className="leg__note">{stay.blurb}</p>
+            <p className="leg__map"><MapLink href={placeUrl(stay.query)}>Hotel on map</MapLink></p>
           </article>
         </div>
       )}

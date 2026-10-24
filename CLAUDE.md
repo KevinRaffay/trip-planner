@@ -23,6 +23,9 @@ On Windows Git Bash, set `MSYS_NO_PATHCONV=1` when passing `TRIP_BASE=/trip-plan
 ## Data model (trip.json)
 `trip` (dates, travelers with a `from` date — Jennie joins 2027-06-09), `cities`, `tags`, `stays[]`, `legs[]` (`mode`: `air` | `train`; `status`: `booked` | `bookable` | `opens-later` | `optional`), `days[]` (one per date, contiguous start..end; each lists its `legs` ids), `transitNotes`, `bookings`, `bookingSequence`, `costs`.
 
+## Google Maps
+Deep links only (Maps URLs API): `src/lib/maps.js` builds `https://www.google.com/maps/search|dir/?api=1...` links from data. **No API key, no Maps JS/Embed SDK** — nothing billable or secret ships in this public bundle. Data: `stays[].query` (hotel search text) and `days[].places[]` (`{name, query}`, in visit order, max 8). Legs need no extra fields: trains link transit directions `from`→`to`, flights link the arrival airport. Day routes walk from that night's hotel; `daytrip` days start at the first stop (the hotel is in another town). `check-data` builds every link and asserts it is a well-formed Maps URL. An interactive map would need per-place lat/lng and a referrer-restricted key (or Leaflet/OSM) — not built.
+
 ## Invariants
 1. **The site is public. No booking references, confirmation numbers or seat numbers in `trip.json`, source or docs.** Status ("Confirmed") and non-identifying detail only. `validate.js` pattern-checks for this; the patterns deliberately do not contain the real values.
 2. Every leg must be dated inside the trip, listed on its own day, and use known travelers; stays' `nights` must span check-in to check-out (enforced by `check-data`).
@@ -32,5 +35,6 @@ On Windows Git Bash, set `MSYS_NO_PATHCONV=1` when passing `TRIP_BASE=/trip-plan
 
 ## Status
 - v0.1: all views built and verified in the dev preview (desktop + 375px, light + dark, no horizontal overflow, filters drive Itinerary and Calendar). Service worker file is syntax-checked and served but its registration was not exercised in the Claude browser pane (the pane refused to fetch it); confirm on the deployed site.
+- v0.2: Google Maps deep links on Day detail (places, day route, hotel), Itinerary cards (day route), Hotels, and Travel legs. Verified in the dev preview (hrefs decoded, 375px, dark); not yet clicked through on the deployed site.
 - Source: `iberian_grand_tour_lisbon_loop_2027.pdf` (as of 2026-10-24). Fares/rates are estimates.
 - Pages: repo Settings → Pages → Source must be "GitHub Actions".
