@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { validateTrip } from './lib/validate.js';
 import { useHashRoute, hrefTo } from './lib/route.js';
 import { useTheme } from './theme.js';
@@ -29,13 +29,40 @@ async function loadTrip() {
   return data;
 }
 
+const isActive = (route, name) => route.name === name || (name === 'itinerary' && route.name === 'day');
+
 function TopBar({ route }) {
+  const [open, setOpen] = useState(false);
+  const ref = useRef(null);
+  const current = NAV.find(([name]) => isActive(route, name))?.[2] ?? 'Menu';
+
+  // Collapse after navigating, on Escape, and on a tap outside the header.
+  useEffect(() => { setOpen(false); }, [route.name, route.date]);
+  useEffect(() => {
+    if (!open) return undefined;
+    const onKey = (e) => { if (e.key === 'Escape') setOpen(false); };
+    const onDown = (e) => { if (ref.current && !ref.current.contains(e.target)) setOpen(false); };
+    document.addEventListener('keydown', onKey);
+    document.addEventListener('pointerdown', onDown);
+    return () => {
+      document.removeEventListener('keydown', onKey);
+      document.removeEventListener('pointerdown', onDown);
+    };
+  }, [open]);
+
   return (
-    <header className="topbar">
-      <nav className="topbar__nav" aria-label="Sections">
+    <header className="topbar" ref={ref}>
+      <button type="button" className="topbar__toggle" aria-expanded={open} aria-controls="site-nav"
+        onClick={() => setOpen((o) => !o)}>
+        <span className="burger" aria-hidden="true"><span /><span /><span /></span>
+        <span className="topbar__current">{current}</span>
+        <span className="sr-only">{open ? 'Close menu' : 'Open menu'}</span>
+      </button>
+      <nav id="site-nav" className={`topbar__nav${open ? ' topbar__nav--open' : ''}`} aria-label="Sections">
         {NAV.map(([name, to, label]) => (
           <a key={name} href={hrefTo(to, name === 'itinerary' || name === 'calendar' ? route : null)}
-            className={`topbar__link${route.name === name || (name === 'itinerary' && route.name === 'day') ? ' topbar__link--on' : ''}`}>
+            aria-current={isActive(route, name) ? 'page' : undefined}
+            className={`topbar__link${isActive(route, name) ? ' topbar__link--on' : ''}`}>
             {label}
           </a>
         ))}
