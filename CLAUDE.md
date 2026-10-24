@@ -1,6 +1,6 @@
 # trip-planner
 
-Static GitHub Pages app for the Iberian Grand Tour (May 21 – Jun 16, 2027): itinerary, calendar, day filters, and travel (air/train) sections. Built on the architecture of the betsheet static app (Vite + React, hash routing, one bundled JSON payload, light/dark toggle, hand-written service worker, Pages workflow) without any of its racing code.
+Static GitHub Pages app for the Iberian Grand Tour (May 21 – Jun 16, 2027): itinerary, calendar, day filters, and travel (air/train) sections. Built on the architecture of the betsheet static app (Vite + React, hash routing, one bundled JSON payload, hand-written service worker, Pages workflow) without any of its racing code.
 
 **Keep this file current:** update it in the same commit as any rule, invariant or status change.
 
@@ -36,5 +36,6 @@ Deep links only (Maps URLs API): `src/lib/maps.js` builds `https://www.google.co
 ## Status
 - v0.1: all views built and verified in the dev preview (desktop + 375px, light + dark, no horizontal overflow, filters drive Itinerary and Calendar). Service worker file is syntax-checked and served but its registration was not exercised in the Claude browser pane (the pane refused to fetch it); confirm on the deployed site.
 - v0.2: Google Maps deep links on Day detail (places, day route, hotel), Itinerary cards (day route), Hotels, and Travel legs. Verified in the dev preview (hrefs decoded, 375px, dark); not yet clicked through on the deployed site.
+- v0.3: header is just the section nav. The brand label and the Light/Dark button were removed on request; there is no theme toggle (`src/theme.js` only follows the OS setting, so a phone set to dark still shows the dark palette).
 - Source: `iberian_grand_tour_lisbon_loop_2027.pdf` (as of 2026-10-24). Fares/rates are estimates.
 - Pages: repo Settings → Pages → Source must be "GitHub Actions".
