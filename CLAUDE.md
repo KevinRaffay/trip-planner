@@ -16,8 +16,8 @@ On Windows Git Bash, set `MSYS_NO_PATHCONV=1` when passing `TRIP_BASE=/trip-plan
 - `public/trip.json` — **all** trip content. Editing the trip means editing this file only.
 - `src/lib/validate.js` — shared validator (browser `loadTrip` + `scripts/check-data.js`)
 - `src/lib/filters.js` — filter model; filters live in the hash query (`#/itinerary?city=..&tag=..&q=..`; there is no per-person filter, everyone is shown) and are shared by Itinerary and Calendar
-- `src/lib/route.js` — hash routing; routes `#/`, `#/itinerary`, `#/calendar`, `#/travel`, `#/hotels`, `#/plan`, `#/day/YYYY-MM-DD`
-- `src/views/` — one file per page; `common.jsx` holds FilterBar, LegCard, badges
+- `src/lib/route.js` — hash routing; routes `#/`, `#/itinerary`, `#/calendar`, `#/travel`, `#/hotels`, `#/plan`, `#/report`, `#/day/YYYY-MM-DD`
+- `src/views/` — one file per page (`Report.jsx` is the printable full-trip document); `common.jsx` holds FilterBar, LegCard, badges
 - `public/sw.js` — network-first for `trip.json` + navigations, cache-first for `/assets/*`; registers in production only
 
 ## Data model (trip.json)
@@ -25,9 +25,6 @@ On Windows Git Bash, set `MSYS_NO_PATHCONV=1` when passing `TRIP_BASE=/trip-plan
 
 ## Google Maps
 Deep links only (Maps URLs API): `src/lib/maps.js` builds `https://www.google.com/maps/search|dir/?api=1...` links from data. **No API key, no Maps JS/Embed SDK** — nothing billable or secret ships in this public bundle. Data: `stays[].query` (hotel search text) and `days[].places[]` (`{name, query}`, in visit order, max 8). Legs need no extra fields: trains link transit directions `from`→`to`, flights link the arrival airport. Day routes walk from that night's hotel; `daytrip` days start at the first stop (the hotel is in another town). `check-data` builds every link and asserts it is a well-formed Maps URL. An interactive map would need per-place lat/lng and a referrer-restricted key (or Leaflet/OSM) — not built.
-
-### Google My Maps export
-`src/lib/mymaps.js` builds a CSV in the browser (Plan page button): one row per unique hotel/sight (`Name, Address, Type, City, Days, Date, Description`), deduped by map query (a place visited on two days is one row listing both). My Maps geocodes the `Address` column, so no lat/lng is stored. Import is manual and one-way (My Maps does not sync); flights/trains are not drawn. `check-data` asserts no place is lost and the CSV has one line per row.
 
 ### Hotel alternatives
 `alternatives[]` in trip.json (`{city, group: marriott|ihg|eurostars, brand, name, area, query}`) feeds a collapsible per-city list under the stays on the Hotels page, each with a Maps link. It is a curated shortlist (about 3 per chain group per city), **not every property**, built from web searches in Oct 2026 that returned partial lists, so some entries are flagged only by that evidence (e.g. recent openings). Manchester is deliberately absent (booked stay). Two gaps show as "None found in the central area": no IHG in Seville and no Eurostars in London. Chain portfolios change: re-check before relying on it.
@@ -47,11 +44,11 @@ Deep links only (Maps URLs API): `src/lib/maps.js` builds `https://www.google.co
 - v0.2: Google Maps deep links on Day detail (places, day route, hotel), Itinerary cards (day route), Hotels, and Travel legs. Verified in the dev preview (hrefs decoded, 375px, dark); not yet clicked through on the deployed site.
 - v0.3: header is just the section nav. The brand label and the Light/Dark button were removed on request; there is no theme toggle (`src/theme.js` only follows the OS setting, so a phone set to dark still shows the dark palette).
 - v0.4: header nav is a hamburger at <=640px (shows the current section, lists every item, closes on navigate / Escape / outside tap); wider screens keep the inline links, which wrap rather than scroll. Add new sections to `NAV` in `src/app.jsx` and they appear in both.
-- v0.5: Plan page "Download CSV for My Maps" (65 places). Output checked in the preview; the actual My Maps import was not run (needs a Google account), so confirm the pins land correctly on first use.
 - v0.6: Hotels page "Alternatives by city" (41 options across Lisbon, Porto, Madrid, Barcelona, Seville, London). Not verified against each chain's own site.
 - v0.7: synced to the revised PDF: Jennie on AA 136 and the return on AA 135, both Premium Economy booked on miles (costs and booking tables updated). Booking refs and seat numbers in the PDF were deliberately not copied. Flight durations (10h 30m, 11h 10m) are computed from the PDF times, not stated in it.
 - v0.8: the per-person (traveler) day filter was removed on request; everyone is always shown. Old shared links containing `who=` are ignored. Day pages still say who is on the trip that day.
 - v0.9: six cart tours added; day plans rewritten around them (Sintra May 24, Madrid in a Day May 28, Toledo/Segovia May 29, Girona Jun 1, London in a Day Jun 15, Lisbon walking tour May 23). Displaced items: Alfama/Sao Jorge Castle, the Toledo AVE leg and day, the separate Royal Palace day, Montserrat/Montjuic option (Sagrada Familia + Park Guell moved to Jun 3). The cart dates Toledo/Segovia as Jun 29; the planner uses May 29 and the user must fix the cart.
-- v0.10: Viator "3 Cities in One Day" (Cordoba, white village, Ronda) added for Jun 5, reserved, $355.84 charged Jun 3. It replaces the Cordoba train day trip (leg removed); the Alcazar/Cathedral/Giralda morning and Triana flamenco moved to Jun 6. Party size was not on the screenshot: assumed Kevin and Michelle.
+- v0.10: a Viator Cordoba/Ronda tour (Jun 5) and a Viator Seville walking tour (Jun 4) were added and then removed on request (still planning); Jun 5/6 and the Cordoba train leg are back to the original plan. `vendor`, the `reserved` status and the `BR-<digits>` privacy check stay for later Viator tours.
+- v0.11: the Google My Maps CSV export was removed (Plan page block, `src/lib/mymaps.js`, its checks). New `#/report` page (nav: Report) renders the whole trip as one document; its Print / Save as PDF button calls `window.print()`, and print CSS in `styles.css` forces light colors, hides the nav and keeps table rows and headings together. Checked by printing the page to PDF with headless Edge; the in-app print dialog itself was not exercised.
 - Source: `iberian_grand_tour_lisbon_loop_2027.pdf` (as of 2026-10-24). Fares/rates are estimates.
 - Pages: repo Settings → Pages → Source must be "GitHub Actions".
