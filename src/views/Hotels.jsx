@@ -7,7 +7,7 @@ export default function Hotels({ data }) {
   return (
     <section>
       <h1>Hotels</h1>
-      <p className="dim">Central stays, all under $700/night. {data.stays.reduce((n, s) => n + s.nights, 0)} nights across {data.stays.length} stays.</p>
+      <p className="dim">Central stays; the Marriott/Autograph picks are all under $700/night.{' '}{data.stays.reduce((n, s) => n + s.nights, 0)} nights across {data.stays.length} stays.</p>
       <div className="grid">
         {data.stays.map((s) => (
           <article key={s.id} className="card" style={{ '--city': cityOf(data, s.city).color }}>
