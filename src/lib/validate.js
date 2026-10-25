@@ -59,6 +59,13 @@ export function validateTrip(t) {
     for (const p of x.travelers) need(travelers.has(p), `${x.id}: unknown traveler "${p}"`);
   }
 
+  // Food guides: known city, each spot has a name, map query and note.
+  for (const g of t.guides ?? []) {
+    need(cityIds.has(g.city), `guide "${g.id}": unknown city "${g.city}"`);
+    need(g.title && Array.isArray(g.spots) && g.spots.length > 0, `guide "${g.id}": title and spots are required`);
+    for (const s of g.spots ?? []) need(s.name && s.query && s.note, `guide "${g.id}": every spot needs name, query and note`);
+  }
+
   // Hotel alternatives: known city and chain group, with a map query.
   const groups = new Set(['marriott', 'ihg', 'eurostars']);
   for (const a of t.alternatives ?? []) {

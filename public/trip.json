@@ -48,6 +48,54 @@
     { "id": "london-2", "city": "london", "hotel": "London Marriott County Hall", "area": "South Bank, facing Big Ben", "checkIn": "2027-06-13", "checkOut": "2027-06-16", "nights": 3, "rate": "GBP 350-550 / night", "stars": 5, "status": "bookable", "blurb": "Return stay at County Hall before flying home from Heathrow on Jun 16.", "query": "London Marriott Hotel County Hall" }
   ],
 
+  "guides": [
+    {
+      "id": "porto-francesinha",
+      "city": "porto",
+      "title": "Where to eat: francesinha",
+      "intro": "Porto's signature sandwich, ranked.",
+      "tip": "Ordering, anywhere: com ovo (fried egg on top), fries for the sauce, and a fino (a small draft beer) is the local pairing.",
+      "spots": [
+        {
+          "rank": 1,
+          "pick": true,
+          "name": "Cervejaria Brasão (Aliados)",
+          "address": "Rua de Ramalho Ortigão 28",
+          "query": "Cervejaria Brasão Aliados Rua de Ramalho Ortigão 28 Porto",
+          "note": "My pick if you only have one. Modern benchmark overlooking the Aliados area: francesinha is the house star, sauce rich but balanced, premium ingredients, and half portions available. A sandwich-by-sandwich comparison picked it as the city's best overall, ahead of Santiago. Bookable, sit-down, comfortable."
+        },
+        {
+          "rank": 2,
+          "name": "Café Santiago",
+          "address": "Rua de Passos Manuel 226",
+          "query": "Café Santiago Rua de Passos Manuel 226 Porto",
+          "note": "The famous classic. Serving francesinhas for more than 50 years, and its special sauce is rated by many as one of the best in town. No-frills and busy: expect a queue, no reservations."
+        },
+        {
+          "rank": 3,
+          "name": "Bufete Fase",
+          "address": "Rua de Santa Catarina 1147",
+          "query": "Bufete Fase Rua de Santa Catarina 1147 Porto",
+          "note": "The locals' no-nonsense pick. Since 1984, cooked in front of you, only the typical francesinha (no modern variations, no spicy version; add your own). Smoother, milder sauce. Arrive early; it's up Santa Catarina, north of centre."
+        },
+        {
+          "rank": 4,
+          "name": "A Regaleira",
+          "address": "Rua do Bonjardim 87",
+          "query": "A Regaleira Rua do Bonjardim 87 Porto",
+          "note": "The original. Daniel David de Silva created the francesinha here in 1953, adapting the croque monsieur with local meats and a custom beer-and-tomato sauce. Spicier sauce with a cumin kick. Go for the history."
+        },
+        {
+          "rank": 5,
+          "name": "O Afonso",
+          "address": "Rua da Torrinha 219",
+          "query": "O Afonso Rua da Torrinha 219 Porto",
+          "note": "The dark horse, decorated as a shrine to Ayrton Senna. Per Taste Porto's local guide, \"to many, this is the best francesinha in town\"; Bourdain was pointed here."
+        }
+      ]
+    }
+  ],
+
   "alternatives": [
     {"city":"lisbon","group":"marriott","brand":"Autograph Collection","name":"The Ivens, Autograph Collection","area":"Chiado","query":"The Ivens, Autograph Collection, Lisbon"},
     {"city":"lisbon","group":"marriott","brand":"Sheraton","name":"Sheraton Lisboa Hotel & Spa","area":"Saldanha","query":"Sheraton Lisboa Hotel & Spa, Lisbon"},

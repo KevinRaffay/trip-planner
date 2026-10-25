@@ -159,6 +159,12 @@ p { margin: 0 0 .75rem; }
 .places { margin: 0 0 12px; padding: 0; list-style: none; display: flex; flex-wrap: wrap; gap: 6px 16px; }
 a.btn { color: var(--accent-text); }
 
+/* Food guides */
+.guide { margin: 0 0 12px; padding-left: 1.3rem; display: grid; gap: 12px; }
+.guide__head { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+.guide p { margin: 2px 0 0; }
+.guide__note { color: var(--text); }
+
 /* Hotel alternatives */
 .alts { margin-top: 28px; }
 .alt { background: var(--bg-raised); border: 1px solid var(--border); border-left: 5px solid var(--city); border-radius: var(--radius); padding: 10px 14px; margin-bottom: 8px; }
