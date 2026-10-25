@@ -77,16 +77,8 @@ export function FilterBar({ data, route, filters, shown, total }) {
   const active = isFiltering(filters);
   return (
     <section className="filters" aria-label="Filter days">
-      <div className="filters__row">
-        <input className="field" type="search" placeholder="Search days, places, hotels…" value={filters.q}
-          onChange={(e) => set({ q: e.target.value })} aria-label="Search days" />
-        <select className="field" value={filters.who} onChange={(e) => set({ who: e.target.value })} aria-label="Traveler">
-          <option value="">Everyone</option>
-          {data.trip.travelers.map((p) => (
-            <option key={p.name} value={p.name}>{p.name}{p.from > data.trip.start ? ` (from ${formatDay(p.from)})` : ''}</option>
-          ))}
-        </select>
-      </div>
+      <input className="field" type="search" placeholder="Search days, places, hotels…" value={filters.q}
+        onChange={(e) => set({ q: e.target.value })} aria-label="Search days" />
       <div className="filters__group" role="group" aria-label="Cities">
         {data.cities.map((c) => (
           <Chip key={c.id} color={c.color} active={filters.cities.includes(c.id)} onClick={() => set({ cities: toggle(filters.cities, c.id) })}>

@@ -15,7 +15,7 @@ On Windows Git Bash, set `MSYS_NO_PATHCONV=1` when passing `TRIP_BASE=/trip-plan
 ## Where things live
 - `public/trip.json` — **all** trip content. Editing the trip means editing this file only.
 - `src/lib/validate.js` — shared validator (browser `loadTrip` + `scripts/check-data.js`)
-- `src/lib/filters.js` — filter model; filters live in the hash query (`#/itinerary?city=..&tag=..&who=..&q=..`) and are shared by Itinerary and Calendar
+- `src/lib/filters.js` — filter model; filters live in the hash query (`#/itinerary?city=..&tag=..&q=..`; there is no per-person filter, everyone is shown) and are shared by Itinerary and Calendar
 - `src/lib/route.js` — hash routing; routes `#/`, `#/itinerary`, `#/calendar`, `#/travel`, `#/hotels`, `#/plan`, `#/day/YYYY-MM-DD`
 - `src/views/` — one file per page; `common.jsx` holds FilterBar, LegCard, badges
 - `public/sw.js` — network-first for `trip.json` + navigations, cache-first for `/assets/*`; registers in production only
@@ -47,5 +47,6 @@ Deep links only (Maps URLs API): `src/lib/maps.js` builds `https://www.google.co
 - v0.5: Plan page "Download CSV for My Maps" (65 places). Output checked in the preview; the actual My Maps import was not run (needs a Google account), so confirm the pins land correctly on first use.
 - v0.6: Hotels page "Alternatives by city" (41 options across Lisbon, Porto, Madrid, Barcelona, Seville, London). Not verified against each chain's own site.
 - v0.7: synced to the revised PDF: Jennie on AA 136 and the return on AA 135, both Premium Economy booked on miles (costs and booking tables updated). Booking refs and seat numbers in the PDF were deliberately not copied. Flight durations (10h 30m, 11h 10m) are computed from the PDF times, not stated in it.
+- v0.8: the per-person (traveler) day filter was removed on request; everyone is always shown. Old shared links containing `who=` are ignored. Day pages still say who is on the trip that day.
 - Source: `iberian_grand_tour_lisbon_loop_2027.pdf` (as of 2026-10-24). Fares/rates are estimates.
 - Pages: repo Settings → Pages → Source must be "GitHub Actions".

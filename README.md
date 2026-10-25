@@ -4,7 +4,7 @@ Itinerary, calendar and travel planner for **The Iberian Grand Tour** (May 21 �
 
 A static React app hosted on GitHub Pages: <https://kevinraffay.github.io/trip-planner/>
 
-- **Itinerary** — every day grouped by city/hotel, with filters for city, day type, traveler and text search
+- **Itinerary** — every day grouped by city/hotel, with filters for city, day type and text search
 - **Calendar** — May and June grid; filters dim non-matching days
 - **Travel** — air and train legs, with status (booked / bookable / opens later) and public-transport notes
 - **Hotels**, **Plan** (what to book and when, cost estimates), light/dark theme, offline after one visit
