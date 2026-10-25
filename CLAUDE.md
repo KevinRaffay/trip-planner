@@ -29,6 +29,9 @@ Deep links only (Maps URLs API): `src/lib/maps.js` builds `https://www.google.co
 ### Google My Maps export
 `src/lib/mymaps.js` builds a CSV in the browser (Plan page button): one row per unique hotel/sight (`Name, Address, Type, City, Days, Date, Description`), deduped by map query (a place visited on two days is one row listing both). My Maps geocodes the `Address` column, so no lat/lng is stored. Import is manual and one-way (My Maps does not sync); flights/trains are not drawn. `check-data` asserts no place is lost and the CSV has one line per row.
 
+### Hotel alternatives
+`alternatives[]` in trip.json (`{city, group: marriott|ihg|eurostars, brand, name, area, query}`) feeds a collapsible per-city list under the stays on the Hotels page, each with a Maps link. It is a curated shortlist (about 3 per chain group per city), **not every property**, built from web searches in Oct 2026 that returned partial lists, so some entries are flagged only by that evidence (e.g. recent openings). Manchester is deliberately absent (booked stay). Two gaps show as "None found in the central area": no IHG in Seville and no Eurostars in London. Chain portfolios change: re-check before relying on it.
+
 ## Invariants
 1. **The site is public. No booking references, confirmation numbers or seat numbers in `trip.json`, source or docs.** Status ("Confirmed") and non-identifying detail only. `validate.js` pattern-checks for this; the patterns deliberately do not contain the real values.
 2. Every leg must be dated inside the trip, listed on its own day, and use known travelers; stays' `nights` must span check-in to check-out (enforced by `check-data`).
@@ -42,5 +45,6 @@ Deep links only (Maps URLs API): `src/lib/maps.js` builds `https://www.google.co
 - v0.3: header is just the section nav. The brand label and the Light/Dark button were removed on request; there is no theme toggle (`src/theme.js` only follows the OS setting, so a phone set to dark still shows the dark palette).
 - v0.4: header nav is a hamburger at <=640px (shows the current section, lists every item, closes on navigate / Escape / outside tap); wider screens keep the inline links, which wrap rather than scroll. Add new sections to `NAV` in `src/app.jsx` and they appear in both.
 - v0.5: Plan page "Download CSV for My Maps" (65 places). Output checked in the preview; the actual My Maps import was not run (needs a Google account), so confirm the pins land correctly on first use.
+- v0.6: Hotels page "Alternatives by city" (41 options across Lisbon, Porto, Madrid, Barcelona, Seville, London). Not verified against each chain's own site.
 - Source: `iberian_grand_tour_lisbon_loop_2027.pdf` (as of 2026-10-24). Fares/rates are estimates.
 - Pages: repo Settings → Pages → Source must be "GitHub Actions".
