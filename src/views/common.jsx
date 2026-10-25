@@ -26,21 +26,30 @@ export function CityDot({ data, id }) {
 
 export const money = (n) => `$${n.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
 
-/** A guided tour from the shopping cart. "In cart" is not booked: say so. */
+/** Tour status. "In cart" is not booked and "reserved" is not yet paid: say so. */
+export const TOUR_STATUS = {
+  'in-cart': { label: 'In cart, not booked', short: 'In cart', cls: 'wait' },
+  reserved: { label: 'Reserved, pay later', short: 'Reserved', cls: 'go' },
+  booked: { label: 'Booked', short: 'Booked', cls: 'ok' },
+};
+
+/** A guided tour (from a shopping cart or a reservation). */
 export function TourCard({ tour }) {
-  const inCart = tour.status === 'in-cart';
+  const s = TOUR_STATUS[tour.status] ?? TOUR_STATUS['in-cart'];
   return (
     <article className="leg leg--tour">
       <div className="leg__head">
         <span className="leg__icon" aria-hidden="true">🎟</span>
         <h3 className="leg__route">{tour.name}</h3>
-        <span className={`badge badge--${inCart ? 'wait' : 'ok'}`}>{inCart ? 'In cart, not booked' : 'Booked'}</span>
+        <span className={`badge badge--${s.cls}`}>{s.label}</span>
       </div>
       <dl className="facts">
         <dt>When</dt><dd>{formatDay(tour.date)}, {tour.time}</dd>
+        <dt>Via</dt><dd>{tour.vendor}</dd>
         <dt>Party</dt><dd>{tour.party} ({tour.travelers.join(', ')})</dd>
         <dt>Price</dt><dd>{money(tour.price)}</dd>
-        <dt>Cancel</dt><dd>Free until {formatDay(tour.cancelBy)}</dd>
+        {tour.chargeOn && <><dt>Charged</dt><dd>Card charged {formatDay(tour.chargeOn)}</dd></>}
+        {tour.cancelBy && <><dt>Cancel</dt><dd>Free until {formatDay(tour.cancelBy)}</dd></>}
       </dl>
       {tour.note && <p className="leg__note">{tour.note}</p>}
     </article>

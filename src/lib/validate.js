@@ -52,7 +52,8 @@ export function validateTrip(t) {
     const day = byDate.get(x.date);
     need(day, `${x.id}: date ${x.date} is outside the trip`);
     need(!day || (day.tours ?? []).includes(x.id), `${x.id}: not listed on day ${x.date}`);
-    need(['in-cart', 'booked'].includes(x.status), `${x.id}: status must be in-cart or booked`);
+    need(['in-cart', 'reserved', 'booked'].includes(x.status), `${x.id}: status must be in-cart, reserved or booked`);
+    need(x.vendor, `${x.id}: vendor is required`);
     need(typeof x.price === 'number' && x.price >= 0, `${x.id}: price must be a number`);
     need(x.name && x.short && x.time && x.party, `${x.id}: name, short, time and party are required`);
     for (const p of x.travelers) need(travelers.has(p), `${x.id}: unknown traveler "${p}"`);
@@ -78,6 +79,7 @@ export function validateTrip(t) {
   // (public, bundled) source. Catches long '#<digits>' numbers, 6-character
   // mixed letter+digit PNR codes, and "ref/confirmation ... <code>" phrases.
   const blob = JSON.stringify(t);
+  need(!/\bBR-?\d{6,}\b/.test(blob), 'a Viator-style booking reference (BR-<digits>) is in trip.json - this site is public');
   need(!/#\d{7,}/.test(blob), 'a confirmation-number-like "#<digits>" is in trip.json - this site is public');
   need(!/\b(?=[A-Z0-9]*\d)(?=[A-Z0-9]*[A-Z])[A-Z0-9]{6}\b/.test(blob), 'a 6-character booking-reference-like code is in trip.json - this site is public');
   need(!/\b(booking|confirmation|conf)\b[^"]{0,12}\b(ref|number|no)\b/i.test(blob), 'booking/confirmation reference wording is in trip.json - this site is public');
