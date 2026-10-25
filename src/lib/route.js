@@ -4,7 +4,7 @@ import { filtersFromQuery, filtersToQuery } from './filters.js';
 // Hash routing: GitHub Pages answers unknown paths with its own 404, but a
 // fragment never reaches the server, so every deep link survives a reload.
 
-const SECTIONS = ['itinerary', 'calendar', 'travel', 'hotels', 'plan'];
+const SECTIONS = ['itinerary', 'calendar', 'travel', 'hotels', 'plan', 'report'];
 
 function read() {
   const raw = window.location.hash.replace(/^#/, '') || '/';

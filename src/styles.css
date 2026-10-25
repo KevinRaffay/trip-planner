@@ -224,8 +224,43 @@ a.btn { color: var(--accent-text); }
   .table__total td { border-top: 0; }
 }
 
+/* Report (Print / Save as PDF) */
+.report { max-width: 900px; margin: 0 auto; }
+.report__bar { margin-bottom: 16px; }
+.report__title { margin-bottom: 8px; }
+.report__title h1 { font-size: 2rem; margin: 0; }
+.report__sub { color: var(--gold); text-transform: uppercase; letter-spacing: .06em; font-size: .85rem; margin: 4px 0 8px; font-weight: 600; }
+.report h2 { border-bottom: 2px solid var(--gold); padding-bottom: 4px; margin: 26px 0 10px; color: var(--accent); }
+.report h3 { margin: 14px 0 6px; font-size: 1rem; }
+.report .table { font-size: .84rem; }
+.report__group { margin-bottom: 6px; }
+.report__date { white-space: nowrap; width: 1%; font-weight: 600; }
+.report__line { color: var(--muted); font-size: .8rem; margin-top: 2px; }
+.report .nowrap { white-space: nowrap; }
+.report__alts { margin: 0 0 4px; font-size: .86rem; }
+
 @media print {
-  .topbar, .filters, .segmented, .foot { display: none; }
-  body { background: #fff; color: #000; }
+  @page { margin: 14mm; }
+  /* Always print light, whatever the OS theme is. */
+  :root, .dark-theme {
+    --bg: #fff; --bg-subtle: #f3f0e8; --bg-raised: #fff; --border: #cfc8b8;
+    --text: #111; --muted: #444; --accent: #1c2b4f; --accent-text: #fff; --gold: #8a6d2b;
+    --ok: #17794a; --go: #1d5fb8; --wait: #8a6414;
+    color-scheme: light;
+  }
+  .topbar, .filters, .segmented, .foot, .no-print { display: none !important; }
+  body { background: #fff; color: #000; font-size: 11pt; }
+  .main { max-width: none; padding: 0; }
+  .report { max-width: none; }
+  .report__title h1 { font-size: 22pt; }
+  .report h2 { break-after: avoid; }
+  .report h3 { break-after: avoid; }
+  .report tr, .report .report__alts { break-inside: avoid; }
+  .report .table th, .dark-theme .report .table th {
+    background: #1c2b4f; color: #fff;
+    -webkit-print-color-adjust: exact; print-color-adjust: exact;
+  }
+  .report .table tbody tr:nth-child(even) { background: #f3f0e8; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
   .day, .card, .leg { break-inside: avoid; }
+  a { color: inherit; text-decoration: none; }
 }

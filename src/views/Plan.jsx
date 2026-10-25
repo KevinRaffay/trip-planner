@@ -1,41 +1,8 @@
 import React from 'react';
-import { myMapsCsv, myMapsRows, MYMAPS_FILENAME } from '../lib/mymaps.js';
 import { formatDay } from '../lib/dates.js';
 import { money, TOUR_STATUS } from './common.jsx';
 
 const statusClass = (s) => (s === 'BOOKED' ? 'ok' : s.startsWith('YES') ? 'go' : 'wait');
-
-function downloadMyMapsCsv(data) {
-  const url = URL.createObjectURL(new Blob([myMapsCsv(data)], { type: 'text/csv;charset=utf-8' }));
-  const a = document.createElement('a');
-  a.href = url;
-  a.download = MYMAPS_FILENAME;
-  document.body.appendChild(a);
-  a.click();
-  a.remove();
-  URL.revokeObjectURL(url);
-}
-
-function MyMapsBlock({ data }) {
-  const count = myMapsRows(data).length;
-  return (
-    <div className="block">
-      <h2>Map the whole trip in Google My Maps</h2>
-      <p>
-        Every hotel and sight ({count} places) in one file. Import it once into
-        {' '}<a href="https://www.google.com/maps/d/" target="_blank" rel="noopener noreferrer">Google My Maps</a>{' '}
-        to see the full trip as pins, also in the Google Maps app. It does not update itself, so download it again after the plan changes.
-      </p>
-      <p><button type="button" className="btn" onClick={() => downloadMyMapsCsv(data)}>Download CSV for My Maps</button></p>
-      <ol className="notes">
-        <li>In My Maps choose <strong>Create a new map</strong>, then <strong>Import</strong> and pick the downloaded file.</li>
-        <li>For the pin position choose the <strong>Address</strong> column, and for the pin title choose <strong>Name</strong>.</li>
-        <li>Open the layer's <strong>Style</strong> menu and set <strong>Group places by</strong> City (a color per city) or Type (hotels vs sights).</li>
-        <li>Flights and train rides are not drawn; the Travel page has a map link for each.</li>
-      </ol>
-    </div>
-  );
-}
 
 function ToursBlock({ data }) {
   const tours = [...data.tours].sort((a, b) => a.date.localeCompare(b.date));
@@ -71,8 +38,6 @@ export default function Plan({ data }) {
   return (
     <section>
       <h1>Plan</h1>
-
-      <MyMapsBlock data={data} />
 
       <div className="block">
         <h2>Confirmed bookings</h2>

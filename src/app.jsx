@@ -8,6 +8,7 @@ import Calendar from './views/Calendar.jsx';
 import Travel from './views/Travel.jsx';
 import Hotels from './views/Hotels.jsx';
 import Plan from './views/Plan.jsx';
+import Report from './views/Report.jsx';
 import DayDetail from './views/DayDetail.jsx';
 
 const NAV = [
@@ -17,6 +18,7 @@ const NAV = [
   ['travel', '/travel', 'Travel'],
   ['hotels', '/hotels', 'Hotels'],
   ['plan', '/plan', 'Plan'],
+  ['report', '/report', 'Report'],
 ];
 
 /** trip.json is a static asset beside index.html, so it moves with the deploy. */
@@ -98,6 +100,7 @@ export default function App() {
   else if (route.name === 'travel') body = <Travel data={data} />;
   else if (route.name === 'hotels') body = <Hotels data={data} />;
   else if (route.name === 'plan') body = <Plan data={data} />;
+  else if (route.name === 'report') body = <Report data={data} />;
   else if (route.name === 'day') body = <DayDetail data={data} date={route.date} route={route} />;
   else body = <Home data={data} />;
 

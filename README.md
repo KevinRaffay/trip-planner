@@ -9,6 +9,7 @@ A static React app hosted on GitHub Pages: <https://kevinraffay.github.io/trip-p
 - **Travel** — air and train legs, with status (booked / bookable / opens later) and public-transport notes
 - **Guided tours** from the shopping cart on each day and on the Plan page
 - **Hotels**, **Plan** (what to book and when, cost estimates), light/dark theme, offline after one visit
+- **Report** — the whole trip as one document; Print / Save as PDF from the browser
 
 Filters live in the URL, so a filtered view can be bookmarked or shared.
 
