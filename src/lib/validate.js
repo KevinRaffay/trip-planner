@@ -45,6 +45,14 @@ export function validateTrip(t) {
     for (const p of l.travelers) need(travelers.has(p), `${l.id}: unknown traveler "${p}"`);
   }
 
+  // Hotel alternatives: known city and chain group, with a map query.
+  const groups = new Set(['marriott', 'ihg', 'eurostars']);
+  for (const a of t.alternatives ?? []) {
+    need(cityIds.has(a.city), `alternative "${a.name}": unknown city "${a.city}"`);
+    need(groups.has(a.group), `alternative "${a.name}": group must be marriott, ihg or eurostars`);
+    need(a.name && a.brand && a.area && a.query, `alternative "${a.name ?? '?'}": name, brand, area and query are required`);
+  }
+
   // Stays: nights add up and cover the dates.
   for (const s of t.stays) {
     need(cityIds.has(s.city), `${s.id}: unknown city "${s.city}"`);

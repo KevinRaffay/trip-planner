@@ -26,6 +26,56 @@ export default function Hotels({ data }) {
           </article>
         ))}
       </div>
+      <Alternatives data={data} />
     </section>
+  );
+}
+
+const GROUPS = [
+  ['marriott', 'Marriott Bonvoy'],
+  ['ihg', 'IHG One Rewards'],
+  ['eurostars', 'Eurostars'],
+];
+
+/** Per-city Marriott / IHG / Eurostars options, one collapsible block per city. */
+function Alternatives({ data }) {
+  const cities = data.cities.filter((c) => (data.alternatives ?? []).some((a) => a.city === c.id));
+  return (
+    <div className="block alts">
+      <h2>Alternatives by city</h2>
+      <p className="dim">
+        A short list of well-located Marriott, IHG and Eurostars options per city, not every property.
+        Brand portfolios and openings change, so confirm availability and rates on the chain's site before booking.
+        Manchester is left out because that stay is booked.
+      </p>
+      {cities.map((c) => {
+        const list = (data.alternatives ?? []).filter((a) => a.city === c.id);
+        return (
+          <details key={c.id} className="alt" style={{ '--city': c.color }}>
+            <summary><CityDot data={data} id={c.id} /> {c.name} <span className="dim">· {list.length} options</span></summary>
+            {GROUPS.map(([group, label]) => {
+              const items = list.filter((a) => a.group === group);
+              return (
+                <div key={group} className="alt__group">
+                  <h3>{label}</h3>
+                  {items.length === 0 ? (
+                    <p className="dim">None found in the central area.</p>
+                  ) : (
+                    <ul className="alt__list">
+                      {items.map((a) => (
+                        <li key={a.query}>
+                          <strong>{a.name}</strong> <span className="dim">· {a.brand} · {a.area}</span>
+                          {' '}<MapLink href={placeUrl(a.query)}>Map</MapLink>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
+              );
+            })}
+          </details>
+        );
+      })}
+    </div>
   );
 }

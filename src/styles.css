@@ -160,6 +160,14 @@ p { margin: 0 0 .75rem; }
 .places { margin: 0 0 12px; padding: 0; list-style: none; display: flex; flex-wrap: wrap; gap: 6px 16px; }
 a.btn { color: var(--accent-text); }
 
+/* Hotel alternatives */
+.alts { margin-top: 28px; }
+.alt { background: var(--bg-raised); border: 1px solid var(--border); border-left: 5px solid var(--city); border-radius: var(--radius); padding: 10px 14px; margin-bottom: 8px; }
+.alt summary { cursor: pointer; font-weight: 600; display: flex; align-items: center; gap: 8px; min-height: 32px; }
+.alt__group { margin-top: 10px; }
+.alt__group h3 { font-size: .85rem; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); margin-bottom: 4px; }
+.alt__list { margin: 0; padding-left: 1.1rem; display: grid; gap: 6px; }
+
 /* Calendar */
 .cal { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 4px; }
 .cal__dow { text-align: center; font-size: .75rem; color: var(--muted); text-transform: uppercase; padding: 4px 0; }
