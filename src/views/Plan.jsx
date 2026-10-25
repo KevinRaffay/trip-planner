@@ -1,5 +1,7 @@
 import React from 'react';
 import { myMapsCsv, myMapsRows, MYMAPS_FILENAME } from '../lib/mymaps.js';
+import { formatDay } from '../lib/dates.js';
+import { money } from './common.jsx';
 
 const statusClass = (s) => (s === 'BOOKED' ? 'ok' : s.startsWith('YES') ? 'go' : 'wait');
 
@@ -35,6 +37,35 @@ function MyMapsBlock({ data }) {
   );
 }
 
+function ToursBlock({ data }) {
+  const tours = [...data.tours].sort((a, b) => a.date.localeCompare(b.date));
+  const total = tours.reduce((n, t) => n + t.price, 0);
+  const inCart = tours.some((t) => t.status === 'in-cart');
+  return (
+    <div className="block">
+      <h2>Guided tours</h2>
+      {inCart && <p className="dim">Items still in the thetourguy.com shopping cart are not booked until checkout. Free cancellation runs to the day before each tour.</p>}
+      <div className="tablewrap">
+        <table className="table">
+          <thead><tr><th>When</th><th>Tour</th><th>Party</th><th>Status</th><th className="num">Price</th></tr></thead>
+          <tbody>
+            {tours.map((t) => (
+              <tr key={t.id}>
+                <td data-label="When"><a href={`#/day/${t.date}`}>{formatDay(t.date)}</a>, {t.time}</td>
+                <td data-label="Tour">{t.name}{t.note && <span className="dim small"> {t.note}</span>}</td>
+                <td data-label="Party">{t.party}</td>
+                <td data-label="Status"><span className={`badge badge--${t.status === 'in-cart' ? 'wait' : 'ok'}`}>{t.status === 'in-cart' ? 'In cart' : 'Booked'}</span></td>
+                <td data-label="Price" className="num">{money(t.price)}</td>
+              </tr>
+            ))}
+            <tr className="table__total"><td colSpan={4}><strong>Total ({tours.length} tours)</strong></td><td className="num"><strong>{money(total)}</strong></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  );
+}
+
 export default function Plan({ data }) {
   return (
     <section>
@@ -54,6 +85,8 @@ export default function Plan({ data }) {
           ))}
         </div>
       </div>
+
+      <ToursBlock data={data} />
 
       <div className="block">
         <h2>What to book, and when</h2>

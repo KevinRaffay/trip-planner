@@ -24,6 +24,29 @@ export function CityDot({ data, id }) {
   return <span className="dot" style={{ background: cityOf(data, id)?.color }} aria-hidden="true" />;
 }
 
+export const money = (n) => `$${n.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
+
+/** A guided tour from the shopping cart. "In cart" is not booked: say so. */
+export function TourCard({ tour }) {
+  const inCart = tour.status === 'in-cart';
+  return (
+    <article className="leg leg--tour">
+      <div className="leg__head">
+        <span className="leg__icon" aria-hidden="true">🎟</span>
+        <h3 className="leg__route">{tour.name}</h3>
+        <span className={`badge badge--${inCart ? 'wait' : 'ok'}`}>{inCart ? 'In cart, not booked' : 'Booked'}</span>
+      </div>
+      <dl className="facts">
+        <dt>When</dt><dd>{formatDay(tour.date)}, {tour.time}</dd>
+        <dt>Party</dt><dd>{tour.party} ({tour.travelers.join(', ')})</dd>
+        <dt>Price</dt><dd>{money(tour.price)}</dd>
+        <dt>Cancel</dt><dd>Free until {formatDay(tour.cancelBy)}</dd>
+      </dl>
+      {tour.note && <p className="leg__note">{tour.note}</p>}
+    </article>
+  );
+}
+
 const modeIcon = (mode) => (mode === 'air' ? '✈' : '🚆');
 
 /** External Google Maps link; opens the Maps app on a phone. */

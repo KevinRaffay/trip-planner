@@ -45,6 +45,19 @@ export function validateTrip(t) {
     for (const p of l.travelers) need(travelers.has(p), `${l.id}: unknown traveler "${p}"`);
   }
 
+  // Guided tours: dated inside the trip, listed on their day, known travelers.
+  const tourIds = new Set((t.tours ?? []).map((x) => x.id));
+  for (const d of t.days) for (const id of d.tours ?? []) need(tourIds.has(id), `${d.date}: unknown tour "${id}"`);
+  for (const x of t.tours ?? []) {
+    const day = byDate.get(x.date);
+    need(day, `${x.id}: date ${x.date} is outside the trip`);
+    need(!day || (day.tours ?? []).includes(x.id), `${x.id}: not listed on day ${x.date}`);
+    need(['in-cart', 'booked'].includes(x.status), `${x.id}: status must be in-cart or booked`);
+    need(typeof x.price === 'number' && x.price >= 0, `${x.id}: price must be a number`);
+    need(x.name && x.short && x.time && x.party, `${x.id}: name, short, time and party are required`);
+    for (const p of x.travelers) need(travelers.has(p), `${x.id}: unknown traveler "${p}"`);
+  }
+
   // Hotel alternatives: known city and chain group, with a map query.
   const groups = new Set(['marriott', 'ihg', 'eurostars']);
   for (const a of t.alternatives ?? []) {
