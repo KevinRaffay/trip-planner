@@ -20,6 +20,7 @@ if (!problems.length) {
   let links = 0;
   for (const s of trip.stays) { check(`stay ${s.id}`, placeUrl(s.query)); links += 1; }
   for (const l of trip.legs) { check(`leg ${l.id}`, legUrl(l)); links += 1; }
+  for (const g of trip.guides ?? []) for (const s of g.spots) { check(`guide ${g.id}: ${s.name}`, placeUrl(s.query)); links += 1; }
   for (const a of trip.alternatives ?? []) { check(`alternative ${a.name}`, placeUrl(a.query)); links += 1; }
   for (const d of trip.days) {
     for (const p of d.places ?? []) { check(`${d.date} place "${p.name}"`, placeUrl(p.query)); links += 1; }

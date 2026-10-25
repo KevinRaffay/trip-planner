@@ -3,7 +3,7 @@ import { addDays, formatDay, diffDays } from '../lib/dates.js';
 import { travelersOn } from '../lib/filters.js';
 import { hrefTo } from '../lib/route.js';
 import { placeUrl, dayRouteUrl } from '../lib/maps.js';
-import { CityDot, LegCard, MapLink, TourCard, cityOf, tagName } from './common.jsx';
+import { CityDot, GuideBlock, LegCard, MapLink, TourCard, cityOf, tagName } from './common.jsx';
 
 export default function DayDetail({ data, date, route }) {
   const day = data.days.find((d) => d.date === date);
@@ -15,6 +15,7 @@ export default function DayDetail({ data, date, route }) {
   const legs = day.legs.map((id) => data.legs.find((l) => l.id === id));
   const tours = (day.tours ?? []).map((id) => data.tours.find((x) => x.id === id));
   const dayRoute = dayRouteUrl(day, stay);
+  const guides = (data.guides ?? []).filter((g) => g.city === day.city);
   const prev = data.days.find((d) => d.date === addDays(date, -1));
   const next = data.days.find((d) => d.date === addDays(date, 1));
   const n = diffDays(data.trip.start, date) + 1;
@@ -41,6 +42,8 @@ export default function DayDetail({ data, date, route }) {
       {tours.length > 0 && (
         <div className="block"><h2>Guided tours</h2><div className="grid">{tours.map((x) => <TourCard key={x.id} tour={x} />)}</div></div>
       )}
+
+      {guides.map((g) => <GuideBlock key={g.id} guide={g} />)}
 
       {legs.length > 0 && (
         <div className="block"><h2>Getting around</h2><div className="grid">{legs.map((l) => <LegCard key={l.id} leg={l} showDate={false} />)}</div></div>

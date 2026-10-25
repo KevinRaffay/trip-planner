@@ -137,6 +137,25 @@ export default function Report({ data }) {
         ))}
       </section>
 
+      {(data.guides ?? []).map((g) => (
+        <section key={g.id}>
+          <h2>{cityOf(data, g.city).name}: {g.title.replace(/^Where to eat: /, 'where to eat, ')}</h2>
+          <table className="table">
+            <thead><tr><th>#</th><th>Place</th><th>Notes</th></tr></thead>
+            <tbody>
+              {g.spots.map((s) => (
+                <tr key={s.query}>
+                  <td data-label="#">{s.rank}</td>
+                  <td data-label="Place"><strong>{s.name}</strong><br />{s.address}</td>
+                  <td data-label="Notes">{s.note}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+          {g.tip && <p>{g.tip}</p>}
+        </section>
+      ))}
+
       <section>
         <h2>Guided tours</h2>
         <table className="table">

@@ -2,7 +2,7 @@ import React from 'react';
 import { formatDay } from '../lib/dates.js';
 import { EMPTY_FILTERS, isFiltering } from '../lib/filters.js';
 import { setFilters } from '../lib/route.js';
-import { legUrl, legLinkLabel } from '../lib/maps.js';
+import { legUrl, legLinkLabel, placeUrl } from '../lib/maps.js';
 
 export const cityOf = (data, id) => data.cities.find((c) => c.id === id);
 export const tagName = (data, id) => data.tags.find((t) => t.id === id)?.name ?? id;
@@ -22,6 +22,30 @@ export function StatusBadge({ leg }) {
 
 export function CityDot({ data, id }) {
   return <span className="dot" style={{ background: cityOf(data, id)?.color }} aria-hidden="true" />;
+}
+
+/** A ranked "where to eat" list for a city, each spot with a Maps link. */
+export function GuideBlock({ guide }) {
+  return (
+    <div className="block">
+      <h2>{guide.title}</h2>
+      {guide.intro && <p className="dim">{guide.intro}</p>}
+      <ol className="guide">
+        {guide.spots.map((s) => (
+          <li key={s.query}>
+            <div className="guide__head">
+              <strong>{s.name}</strong>
+              {s.pick && <span className="badge badge--ok">Top pick</span>}
+              <MapLink href={placeUrl(s.query)}>Map</MapLink>
+            </div>
+            <p className="dim small">{s.address}</p>
+            <p className="guide__note">{s.note}</p>
+          </li>
+        ))}
+      </ol>
+      {guide.tip && <p className="notice">{guide.tip}</p>}
+    </div>
+  );
 }
 
 export const money = (n) => `$${n.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
