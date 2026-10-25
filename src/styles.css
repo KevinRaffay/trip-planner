@@ -86,7 +86,6 @@ p { margin: 0 0 .75rem; }
 
 /* Filters */
 .filters { background: var(--bg-subtle); border: 1px solid var(--border); border-radius: var(--radius); padding: 12px; margin-bottom: 16px; display: grid; gap: 10px; }
-.filters__row { display: grid; grid-template-columns: 1fr auto; gap: 8px; }
 .filters__group { display: flex; flex-wrap: wrap; gap: 6px; }
 .filters__status { margin: 0; font-size: .88rem; }
 
@@ -210,7 +209,6 @@ a.btn { color: var(--accent-text); }
   .topbar__link { padding: 12px 10px; font-size: 1rem; }
   h1 { font-size: 1.4rem; }
   .hero__title { font-size: 1.6rem; }
-  .filters__row { grid-template-columns: 1fr; }
   .day { grid-template-columns: 48px 1fr; padding: 10px; }
   .grid { grid-template-columns: 1fr; }
   /* Calendar: compact cells, drop the title text, keep colour + badges. */
