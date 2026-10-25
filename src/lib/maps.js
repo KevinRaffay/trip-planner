@@ -26,6 +26,7 @@ export function directionsUrl({ origin, destination, waypoints = [], mode }) {
  * in another town and the train there is its own leg. One stop is a place link.
  */
 export function dayRouteUrl(day, stay) {
+  if (stay?.status === 'tbd') stay = undefined; // no hotel chosen yet: start at the first stop
   // Tour days whose stops are towns apart (Sintra, Toledo/Segovia...) opt out: a walking route would be nonsense.
   if (day.route === false) return null;
   const stops = (day.places ?? []).map((p) => p.query);

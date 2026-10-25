@@ -56,7 +56,7 @@ export default function DayDetail({ data, date, route }) {
             <h3 className="leg__route">{stay.hotel}</h3>
             <p className="dim">{stay.area} · {formatDay(stay.checkIn)} → {formatDay(stay.checkOut)} · {stay.rate}</p>
             <p className="leg__note">{stay.blurb}</p>
-            <p className="leg__map"><MapLink href={placeUrl(stay.query)}>Hotel on map</MapLink></p>
+            {stay.status !== 'tbd' && <p className="leg__map"><MapLink href={placeUrl(stay.query)}>Hotel on map</MapLink></p>}
           </article>
         </div>
       )}
