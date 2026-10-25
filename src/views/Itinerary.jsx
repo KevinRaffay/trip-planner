@@ -3,7 +3,7 @@ import { formatDay, dayOfMonth, dowName } from '../lib/dates.js';
 import { filtersFromQuery, dayMatches, isFiltering } from '../lib/filters.js';
 import { hrefTo } from '../lib/route.js';
 import { dayRouteUrl } from '../lib/maps.js';
-import { FilterBar, CityDot, MapLink, cityOf, tagName } from './common.jsx';
+import { FilterBar, CityDot, MapLink, TOUR_STATUS, cityOf, tagName } from './common.jsx';
 
 export function DayCard({ data, day, route }) {
   const city = cityOf(data, day.city);
@@ -26,7 +26,7 @@ export function DayCard({ data, day, route }) {
             <span key={l.id} className="tag tag--leg">{l.mode === 'air' ? '✈' : '🚆'} {l.from.split(' (')[0]} → {l.to.split(' (')[0]}</span>
           ))}
           {tours.map((x) => (
-            <span key={x.id} className="tag tag--leg">🎟 {x.time} {x.short}{x.status === 'in-cart' ? ' (in cart)' : ''}</span>
+            <span key={x.id} className="tag tag--leg">🎟 {x.time} {x.short}{x.status === 'booked' ? '' : ` (${TOUR_STATUS[x.status].short.toLowerCase()})`}</span>
           ))}
           {data.trip.travelers.filter((p) => p.from === day.date && p.from > data.trip.start).map((p) => (
             <span key={p.name} className="tag tag--who">{p.name} joins</span>
