@@ -8,6 +8,7 @@ import { FilterBar, CityDot, MapLink, cityOf, tagName } from './common.jsx';
 export function DayCard({ data, day, route }) {
   const city = cityOf(data, day.city);
   const legs = day.legs.map((id) => data.legs.find((l) => l.id === id));
+  const tours = (day.tours ?? []).map((id) => data.tours.find((x) => x.id === id));
   const route2 = dayRouteUrl(day, data.stays.find((s) => s.id === day.stay));
   return (
     <article className={`day${day.highlight ? ' day--hl' : ''}`} style={{ '--city': city.color }}>
@@ -23,6 +24,9 @@ export function DayCard({ data, day, route }) {
           {day.tags.map((t) => <span key={t} className={`tag tag--${t}`}>{tagName(data, t)}</span>)}
           {legs.map((l) => (
             <span key={l.id} className="tag tag--leg">{l.mode === 'air' ? '✈' : '🚆'} {l.from.split(' (')[0]} → {l.to.split(' (')[0]}</span>
+          ))}
+          {tours.map((x) => (
+            <span key={x.id} className="tag tag--leg">🎟 {x.time} {x.short}{x.status === 'in-cart' ? ' (in cart)' : ''}</span>
           ))}
           {data.trip.travelers.filter((p) => p.from === day.date && p.from > data.trip.start).map((p) => (
             <span key={p.name} className="tag tag--who">{p.name} joins</span>

@@ -32,6 +32,9 @@ Deep links only (Maps URLs API): `src/lib/maps.js` builds `https://www.google.co
 ### Hotel alternatives
 `alternatives[]` in trip.json (`{city, group: marriott|ihg|eurostars, brand, name, area, query}`) feeds a collapsible per-city list under the stays on the Hotels page, each with a Maps link. It is a curated shortlist (about 3 per chain group per city), **not every property**, built from web searches in Oct 2026 that returned partial lists, so some entries are flagged only by that evidence (e.g. recent openings). Manchester is deliberately absent (booked stay). Two gaps show as "None found in the central area": no IHG in Seville and no Eurostars in London. Chain portfolios change: re-check before relying on it.
 
+### Guided tours
+`tours[]` in trip.json (`{id, date, time, name, short, party, travelers, price, status: in-cart|booked, cancelBy}`) mirrors the user's thetourguy.com shopping cart (6 tours, $1,594.98). **In cart is not booked**; the UI says so. Each tour is listed on its day via `days[].tours`, shown on day cards and day pages, and in a table on the Plan page; the cost summary's "Guided day tours" row must equal the tours' sum (`check-data` enforces it). Days whose stops are towns apart set `route: false` so no nonsense walking route is offered. The cart was never accessed: tour details came from a screenshot the user shared.
+
 ## Invariants
 1. **The site is public. No booking references, confirmation numbers or seat numbers in `trip.json`, source or docs.** Status ("Confirmed") and non-identifying detail only. `validate.js` pattern-checks for this; the patterns deliberately do not contain the real values.
 2. Every leg must be dated inside the trip, listed on its own day, and use known travelers; stays' `nights` must span check-in to check-out (enforced by `check-data`).
@@ -48,5 +51,6 @@ Deep links only (Maps URLs API): `src/lib/maps.js` builds `https://www.google.co
 - v0.6: Hotels page "Alternatives by city" (41 options across Lisbon, Porto, Madrid, Barcelona, Seville, London). Not verified against each chain's own site.
 - v0.7: synced to the revised PDF: Jennie on AA 136 and the return on AA 135, both Premium Economy booked on miles (costs and booking tables updated). Booking refs and seat numbers in the PDF were deliberately not copied. Flight durations (10h 30m, 11h 10m) are computed from the PDF times, not stated in it.
 - v0.8: the per-person (traveler) day filter was removed on request; everyone is always shown. Old shared links containing `who=` are ignored. Day pages still say who is on the trip that day.
+- v0.9: six cart tours added; day plans rewritten around them (Sintra May 24, Madrid in a Day May 28, Toledo/Segovia May 29, Girona Jun 1, London in a Day Jun 15, Lisbon walking tour May 23). Displaced items: Alfama/Sao Jorge Castle, the Toledo AVE leg and day, the separate Royal Palace day, Montserrat/Montjuic option (Sagrada Familia + Park Guell moved to Jun 3). The cart dates Toledo/Segovia as Jun 29; the planner uses May 29 and the user must fix the cart.
 - Source: `iberian_grand_tour_lisbon_loop_2027.pdf` (as of 2026-10-24). Fares/rates are estimates.
 - Pages: repo Settings → Pages → Source must be "GitHub Actions".

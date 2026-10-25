@@ -37,6 +37,14 @@ if (!problems.length) {
   const lines = myMapsCsv(trip).trim().split('\r\n');
   if (lines.length !== rows.length + 1) problems.push(`my-maps export: CSV has ${lines.length} lines for ${rows.length} rows`);
   console.log(`my-maps export OK: ${rows.length} places`);
+
+  // The cost summary's tour line must match the tours it summarizes.
+  const tourTotal = Math.round((trip.tours ?? []).reduce((n, t) => n + t.price, 0));
+  const costRow = trip.costs.find((r) => r.item.startsWith('Guided day tours'));
+  if ((trip.tours ?? []).length && !costRow) problems.push('costs: no "Guided day tours" row for the tours');
+  const usd = `$${tourTotal.toLocaleString('en-US')}`;
+  if (costRow && costRow.estimate !== usd) problems.push(`costs: tours row says ${costRow.estimate}, tours add up to ${usd}`);
+  console.log(`tours OK: ${(trip.tours ?? []).length} (total ${usd})`);
 }
 
 if (problems.length) {
