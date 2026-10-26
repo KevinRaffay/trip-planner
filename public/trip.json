@@ -93,6 +93,95 @@
           "note": "The dark horse, decorated as a shrine to Ayrton Senna. Per Taste Porto's local guide, \"to many, this is the best francesinha in town\"; Bourdain was pointed here."
         }
       ]
+    },
+    {
+      "id": "madrid-free-tapas",
+      "city": "madrid",
+      "title": "Where to eat: bars with free tapas",
+      "intro": "Eleven bars where a drink comes with a free tapa, in the article's order. How much you get and how good it is varies from bar to bar.",
+      "source": {
+        "name": "Madrid Secreto, \"11 bars in Madrid where the beers come with free tapas\" (April 2025)",
+        "url": "https://madridsecreto.co/en/places-with-free-tapas-madrid/"
+      },
+      "spots": [
+        {
+          "rank": 1,
+          "name": "Bar la Amistad",
+          "address": "Paseo de Santa María de la Cabeza 53 (Arganzuela)",
+          "query": "Bar la Amistad Paseo de Santa María de la Cabeza 53 Madrid",
+          "note": "Neighborhood bar with a big terrace; you pick your tapas from the display case. The article puts several tapas plus a beer at about 7 euros. No QR codes or reservations."
+        },
+        {
+          "rank": 2,
+          "name": "El Tigre Sidra Bar and El Tigre del Norte",
+          "address": "Calle de las Infantas 23 and 30, Calle de Hortaleza 23 (Chueca)",
+          "query": "El Tigre Calle de las Infantas 30 Madrid",
+          "note": "Lively bar the article recommends for first-timers. It gives no details on the tapas or prices."
+        },
+        {
+          "rank": 3,
+          "name": "El Lagar",
+          "address": "Calle de Ferraz 39 (Argüelles)",
+          "query": "El Lagar Restaurante Calle de Ferraz 39 Madrid",
+          "note": "Traditional, unfussy bar popular with students. Word of mouth says the tapa gets better the more you order."
+        },
+        {
+          "rank": 4,
+          "name": "El Respiro",
+          "address": "Calle de las Infantas 34 (Chueca)",
+          "query": "El Respiro Calle de las Infantas 34 Madrid",
+          "note": "Tavern run by Galicians. Tapas range from scrambled eggs with asparagus to braviolis."
+        },
+        {
+          "rank": 5,
+          "name": "La Pomarada",
+          "address": "Calle del Conde Duque 3 (Conde Duque)",
+          "query": "La Pomarada Calle del Conde Duque 3 Madrid",
+          "note": "Traditional Asturian cachopo place that kept its old look. Tapas change daily and sometimes come as pinchos. The article recommends the potato omelette and mentions a free cachopo buffet."
+        },
+        {
+          "rank": 6,
+          "name": "Bar Sierra",
+          "address": "Calle de Galileo 41 (Chamberí, near Moncloa)",
+          "query": "Bar Sierra Calle de Galileo 41 Madrid",
+          "note": "Small bar often full of students. A beer comes with tapas at the same price."
+        },
+        {
+          "rank": 7,
+          "name": "La Pequeña Graná",
+          "address": "Calle de Embajadores 124 (Delicias)",
+          "query": "La Pequeña Graná Calle de Embajadores 124 Madrid",
+          "note": "An Embajadores street icon that follows the Andalusian free-tapa tradition."
+        },
+        {
+          "rank": 8,
+          "name": "El Rincón Abulense",
+          "address": "Calle de Caballero de Gracia 18 (Gran Vía)",
+          "query": "El Rincón Abulense Calle de Caballero de Gracia 18 Madrid",
+          "note": "Homemade tapas and friendly, funny waiters. Next to Hotel Senator."
+        },
+        {
+          "rank": 9,
+          "name": "Padrao Bar",
+          "address": "Travesía de la Parada 4 (Gran Vía)",
+          "query": "Padrao Bar Travesía de la Parada 4 Madrid",
+          "note": "Every drink comes with a free snack, such as a big sandwich, paella or wings, and you cannot choose which. The regular menu has huevos rotos, bravas and calamares."
+        },
+        {
+          "rank": 10,
+          "name": "Casa Iván",
+          "address": "Plaza Virgen del Romero 8 (El Carmen)",
+          "query": "Casa Iván Plaza Virgen del Romero 8 Madrid",
+          "note": "Large terrace where each drink comes with an Asian-style tapa, such as uramaki, noodles, croquettes or wings."
+        },
+        {
+          "rank": 11,
+          "name": "La Petisqueira (and La Petisqueira II)",
+          "address": "Calle de Churruca 6 and Calle de Mejía Lequerica 17 (Alonso Martínez)",
+          "query": "La Petisqueira Calle de Churruca 6 Madrid",
+          "note": "Very generous tapas, closer to a small portion. A double beer is 4.75 euros per the article. Often packed."
+        }
+      ]
     }
   ],
 

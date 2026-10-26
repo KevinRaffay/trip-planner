@@ -44,6 +44,9 @@ export function GuideBlock({ guide }) {
         ))}
       </ol>
       {guide.tip && <p className="notice">{guide.tip}</p>}
+      {guide.source && (
+        <p className="dim small">Source: <a href={guide.source.url} target="_blank" rel="noopener noreferrer">{guide.source.name}</a>. Summarized, not quoted.</p>
+      )}
     </div>
   );
 }
