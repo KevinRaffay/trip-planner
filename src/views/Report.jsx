@@ -153,6 +153,7 @@ export default function Report({ data }) {
             </tbody>
           </table>
           {g.tip && <p>{g.tip}</p>}
+          {g.source && <p className="dim small">Source: {g.source.name}, {g.source.url}. Summarized, not quoted.</p>}
         </section>
       ))}
 

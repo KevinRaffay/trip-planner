@@ -63,6 +63,7 @@ export function validateTrip(t) {
   for (const g of t.guides ?? []) {
     need(cityIds.has(g.city), `guide "${g.id}": unknown city "${g.city}"`);
     need(g.title && Array.isArray(g.spots) && g.spots.length > 0, `guide "${g.id}": title and spots are required`);
+    need(!g.source || (g.source.name && (g.source.url ?? '').startsWith('https://')), `guide "${g.id}": source needs a name and an https url`);
     for (const s of g.spots ?? []) need(s.name && s.query && s.note, `guide "${g.id}": every spot needs name, query and note`);
   }
 
