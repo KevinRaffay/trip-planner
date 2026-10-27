@@ -3,7 +3,7 @@ import { formatDay, formatShort } from '../lib/dates.js';
 import { cityOf, money, TOUR_STATUS } from './common.jsx';
 
 const GROUPS = [['marriott', 'Marriott Bonvoy'], ['ihg', 'IHG One Rewards'], ['eurostars', 'Eurostars']];
-const LEG_STATUS = { booked: 'Booked', bookable: 'Bookable now', 'opens-later': 'Opens later', optional: 'Optional' };
+const LEG_STATUS = { booked: 'Booked', bookable: 'Bookable now', tbd: 'To be decided', 'opens-later': 'Opens later', optional: 'Optional' };
 
 /** The whole trip as one printable document (Print / Save as PDF). */
 export default function Report({ data }) {

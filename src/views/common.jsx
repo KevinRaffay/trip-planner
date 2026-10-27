@@ -10,6 +10,7 @@ export const tagName = (data, id) => data.tags.find((t) => t.id === id)?.name ??
 export const STATUS = {
   booked: { label: 'Booked', cls: 'ok' },
   bookable: { label: 'Bookable now', cls: 'go' },
+  tbd: { label: 'To be decided', cls: 'wait' },
   'opens-later': { label: 'Opens later', cls: 'wait' },
   optional: { label: 'Optional', cls: 'dim' },
 };
