@@ -15,3 +15,16 @@ if (import.meta.env.PROD && 'serviceWorker' in navigator) {
       .catch(() => {});
   });
 }
+
+// A Home Screen app on iOS is suspended, not closed, so it keeps showing the
+// version it loaded. When it comes back after a while, reload: navigations and
+// trip.json are network-first, so this picks up a new deploy. The hash route
+// (and filters in it) survives the reload.
+if (import.meta.env.PROD) {
+  const STALE_MS = 60 * 1000;
+  let hiddenAt = 0;
+  document.addEventListener('visibilitychange', () => {
+    if (document.visibilityState === 'hidden') hiddenAt = Date.now();
+    else if (hiddenAt && Date.now() - hiddenAt > STALE_MS && navigator.onLine) window.location.reload();
+  });
+}
