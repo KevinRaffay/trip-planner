@@ -182,6 +182,88 @@
           "note": "Very generous tapas, closer to a small portion. A double beer is 4.75 euros per the article. Often packed."
         }
       ]
+    },
+    {
+      "id": "lisbon-miradouros",
+      "city": "lisbon",
+      "title": "Viewpoints (miradouros)",
+      "intro": "Ten viewpoints in the article's order. Several are within a short walk of each other in Alfama and Graca, so group them by neighborhood. The article gives no street addresses; the area shown is where each one sits.",
+      "source": {
+        "name": "Embrace Some Place, \"Best Lisbon Viewpoints (Miradouros Worth Visiting)\" (updated September 2026)",
+        "url": "https://embracesomeplace.com/best-miradouros-lisbon-portugal/"
+      },
+      "spots": [
+        {
+          "rank": 1,
+          "name": "Miradouro de Sao Pedro de Alcantara",
+          "address": "Bairro Alto",
+          "query": "Miradouro de São Pedro de Alcântara, Lisbon",
+          "note": "Garden terrace the author likes at sunset. She says the Gloria funicular next to it is closed."
+        },
+        {
+          "rank": 2,
+          "name": "Miradouro da Nossa Senhora do Monte",
+          "address": "Graca / Monte",
+          "query": "Miradouro da Nossa Senhora do Monte, Lisbon",
+          "note": "The highest point in the city. A steep climb, which the article says is worth it for the view."
+        },
+        {
+          "rank": 3,
+          "name": "Miradouro das Portas do Sol",
+          "address": "Alfama",
+          "query": "Miradouro das Portas do Sol, Lisbon",
+          "note": "The busiest viewpoint on the list, with musicians most evenings. Best at sunrise to avoid the crowd."
+        },
+        {
+          "rank": 4,
+          "name": "Miradouro de Santa Luzia",
+          "address": "Alfama",
+          "query": "Miradouro de Santa Luzia, Lisbon",
+          "note": "Relaxed tiled terrace over the river and Alfama, about a three-minute walk from Portas do Sol."
+        },
+        {
+          "rank": 5,
+          "name": "Miradouro da Graca (Sophia de Mello Breyner Andresen)",
+          "address": "Graca",
+          "query": "Miradouro da Graça Sophia de Mello Breyner Andresen, Lisbon",
+          "note": "The author's pick for sunset, with the castle in view and a cafe on site."
+        },
+        {
+          "rank": 6,
+          "name": "Terracos do Carmo",
+          "address": "Chiado, near Rossio",
+          "query": "Terraços do Carmo, Lisbon",
+          "note": "Rooftop terrace by the Carmo church ruins with much the same view as the Santa Justa lift."
+        },
+        {
+          "rank": 7,
+          "name": "Castelo de Sao Jorge",
+          "address": "Alfama, above the Baixa",
+          "query": "Castelo de São Jorge, Lisbon",
+          "note": "The walls give wide views, but the ticket (about 17 euros per the article) covers the whole castle, not just the view."
+        },
+        {
+          "rank": 8,
+          "name": "Elevador de Santa Justa",
+          "address": "Baixa, near Rossio",
+          "query": "Elevador de Santa Justa, Lisbon",
+          "note": "The article does not recommend queuing to ride it and says it is closed in 2026; Terracos do Carmo has a similar view."
+        },
+        {
+          "rank": 9,
+          "name": "Miradouro do Recolhimento",
+          "address": "Near the castle and Portas do Sol",
+          "query": "Miradouro do Recolhimento, Lisbon",
+          "note": "Quieter alternative with a similar view, reached by a path past a playground."
+        },
+        {
+          "rank": 10,
+          "name": "Miradouro de Santa Catarina",
+          "address": "Bica / Bairro Alto",
+          "query": "Miradouro de Santa Catarina, Lisbon",
+          "note": "Best for the street musicians and the atmosphere rather than the view itself."
+        }
+      ]
     }
   ],
 
