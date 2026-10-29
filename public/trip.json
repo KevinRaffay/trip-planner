@@ -45,7 +45,7 @@
     { "id": "seville", "city": "seville", "hotel": "Querencia de Sevilla, Autograph Collection", "area": "Opposite the Cathedral", "checkIn": "2027-06-04", "checkOut": "2027-06-08", "nights": 4, "rate": "EUR 260-420 / night", "stars": 4, "status": "bookable", "blurb": "Design boutique directly opposite the Gothic Cathedral, arguably the best address in Seville. Rooftop with Giralda views. Splurge alt: Hotel Alfonso XIII, Luxury Collection (post-Feria May rates EUR 550-850).", "query": "Querencia de Sevilla, Seville" },
     { "id": "london-1", "city": "london", "hotel": "Cheval Three Quays at The Tower of London", "area": "40 Lower Thames Street, City of London", "checkIn": "2027-06-08", "checkOut": "2027-06-10", "nights": 2, "rate": "$1,096 total", "stars": 5, "status": "booked", "blurb": "Booked on Booking.com: Superior One Bedroom Apartment with Sofa Bed (1 king bed, 1 sofa bed). Check-in from 3 PM, check-out until 11 AM. $1,096 total. Free cancellation until 11:59 PM on Jun 6, 2027.", "query": "Cheval Three Quays at The Tower of London, 40 Lower Thames Street, London EC3R 6AG, United Kingdom" },
     { "id": "manchester", "city": "manchester", "hotel": "Kimpton Clocktower Hotel", "area": "Oxford Street", "checkIn": "2027-06-10", "checkOut": "2027-06-13", "nights": 3, "rate": "GBP 1,391 total", "stars": 5, "status": "booked", "blurb": "Victorian Refuge Assurance building with a landmark clock tower and grand tiled lobby. 10-minute walk from Piccadilly station, steps from Oxford Road station and St Peter's Square tram stop for the Metrolink to the Etihad. One 2 Double Premium room for all three. Check-in 3 PM, check-out 12 PM; free cancellation until 7 days before arrival (Jun 3).", "query": "Kimpton Clocktower Hotel, Manchester" },
-    { "id": "london-2", "city": "london", "hotel": "Cheval Three Quays at The Tower of London", "area": "40 Lower Thames Street, City of London", "checkIn": "2027-06-13", "checkOut": "2027-06-16", "nights": 3, "rate": "$1,634 total", "stars": 5, "status": "booked", "blurb": "Booked on Booking.com: Superior One Bedroom Apartment with Sofa Bed (1 king bed, 1 sofa bed). Check-in from 3 PM, check-out until 11 AM. $1,634 total. Free cancellation until 11:59 PM on Jun 11, 2027. Return stay before flying home from Heathrow on Jun 16.", "query": "Cheval Three Quays at The Tower of London, 40 Lower Thames Street, London EC3R 6AG, United Kingdom" }
+    { "id": "london-2", "city": "london", "hotel": "Cheval Three Quays at The Tower of London", "area": "40 Lower Thames Street, City of London", "checkIn": "2027-06-13", "checkOut": "2027-06-16", "nights": 3, "rate": "$1,630 total", "stars": 5, "status": "booked", "blurb": "Booked on Booking.com: Superior One Bedroom Apartment with Sofa Bed (1 king bed, 1 sofa bed). Check-in from 3 PM, check-out until 11 AM. $1,630 total. Free cancellation until 11:59 PM on Jun 11, 2027. Return stay before flying home from Heathrow on Jun 16.", "query": "Cheval Three Quays at The Tower of London, 40 Lower Thames Street, London EC3R 6AG, United Kingdom" }
   ],
 
   "guides": [
@@ -302,13 +302,7 @@
     {"city":"seville","group":"marriott","brand":"Luxury Collection","name":"Hotel Alfonso XIII, a Luxury Collection Hotel","area":"Next to the Alcazar","query":"Hotel Alfonso XIII, Seville"},
     {"city":"seville","group":"marriott","brand":"AC Hotels","name":"AC Hotel Ciudad de Sevilla","area":"City center","query":"AC Hotel Ciudad de Sevilla, Seville"},
     {"city":"seville","group":"eurostars","brand":"Eurostars","name":"Eurostars Sevilla Boutique","area":"Calle Abades, near the Cathedral","query":"Eurostars Sevilla Boutique, Seville"},
-    {"city":"seville","group":"eurostars","brand":"Eurostars","name":"Eurostars Torre Sevilla","area":"Triana side, by Torre Sevilla","query":"Eurostars Torre Sevilla, Seville"},
-    {"city":"london","group":"marriott","brand":"JW Marriott","name":"JW Marriott Grosvenor House London","area":"Park Lane","query":"JW Marriott Grosvenor House London"},
-    {"city":"london","group":"marriott","brand":"Renaissance","name":"St Pancras Renaissance Hotel London","area":"King's Cross / St Pancras","query":"St Pancras Renaissance Hotel London"},
-    {"city":"london","group":"marriott","brand":"Autograph Collection","name":"St. Ermin's Hotel, Autograph Collection","area":"Westminster","query":"St. Ermin's Hotel, London"},
-    {"city":"london","group":"ihg","brand":"InterContinental","name":"InterContinental London Park Lane","area":"Hyde Park Corner","query":"InterContinental London Park Lane"},
-    {"city":"london","group":"ihg","brand":"Kimpton","name":"Kimpton Fitzroy London","area":"Russell Square, Bloomsbury","query":"Kimpton Fitzroy London"},
-    {"city":"london","group":"ihg","brand":"voco","name":"voco London Bloomsbury","area":"Bloomsbury","query":"voco London Bloomsbury"}
+    {"city":"seville","group":"eurostars","brand":"Eurostars","name":"Eurostars Torre Sevilla","area":"Triana side, by Torre Sevilla","query":"Eurostars Torre Sevilla, Seville"}
   ],
 
   "tours": [
@@ -383,7 +377,7 @@
     { "what": "American AA 136 Los Angeles to Heathrow (Jennie)", "when": "Tue Jun 8, 2027", "detail": "Premium Economy. Dep 4:35 PM, arr 11:05 AM Wed Jun 9. 2 checked bags. 82,000 miles + $5.60.", "status": "confirmed" },
     { "what": "Cheval Three Quays at The Tower of London, London", "when": "Jun 8-10, 2027", "detail": "Booked on Booking.com: Superior One Bedroom Apartment with Sofa Bed (1 king bed, 1 sofa bed). Check-in from 3 PM, check-out until 11 AM. $1,096 total. Free cancellation until 11:59 PM on Jun 6, 2027.", "status": "confirmed" },
     { "what": "Kimpton Clocktower Hotel, Manchester", "when": "Jun 10-13, 2027", "detail": "1 room, 2 Double Premium, 3 adults. Flexible Saver Member rate, GBP 1,391.27 total. Check-in 3 PM / out 12 PM. Free cancellation until 7 days before arrival.", "status": "confirmed" },
-    { "what": "Cheval Three Quays at The Tower of London, London", "when": "Jun 13-16, 2027", "detail": "Booked on Booking.com: Superior One Bedroom Apartment with Sofa Bed (1 king bed, 1 sofa bed). Check-in from 3 PM, check-out until 11 AM. $1,634 total. Free cancellation until 11:59 PM on Jun 11, 2027.", "status": "confirmed" },
+    { "what": "Cheval Three Quays at The Tower of London, London", "when": "Jun 13-16, 2027", "detail": "Booked on Booking.com: Superior One Bedroom Apartment with Sofa Bed (1 king bed, 1 sofa bed). Check-in from 3 PM, check-out until 11 AM. $1,630 total. Free cancellation until 11:59 PM on Jun 11, 2027.", "status": "confirmed" },
     { "what": "American AA 135 Heathrow to Los Angeles", "when": "Wed Jun 16, 2027", "detail": "Premium Economy for Kevin, Michelle and Jennie. Dep 4:25 PM, arr 7:35 PM same day. 2 checked bags each. 175,500 miles + $1,286.97.", "status": "confirmed" }
   ],
 
@@ -418,13 +412,13 @@
     { "item": "Flight, Barcelona-Seville", "detail": "Vueling/Iberia economy, 2 seats", "estimate": "$130 - $370" },
     { "item": "Flight, Seville-London", "detail": "Seville to London Gatwick, flight to be decided; economy incl. bags, 2 seats (estimate not checked)", "estimate": "$180 - $500" },
     { "item": "UK trains", "detail": "Avanti London-Manchester return + Windsor/Liverpool day trips, 2 seats", "estimate": "$200 - $450" },
+    { "item": "Hotels - London", "detail": "Cheval Three Quays, booked: $1,096 (Jun 8-10) + $1,630 (Jun 13-16), one apartment each with a king bed and a sofa bed", "estimate": "$2,726" },
     { "item": "Hotels - Iberia, 17 nights", "detail": "Estimate still uses the original Marriott/Autograph rates. Since changed: Lisbon is Eurostars Lisboa Baixa and Madrid is Hotel Indigo (rates not checked), and the 2 Porto nights have no hotel yet", "estimate": "$7,600 - $10,600" },
-    { "item": "Hotels - London", "detail": "Cheval Three Quays, booked: $1,096 (Jun 8-10) + $1,634 (Jun 13-16), one apartment each with a king bed and a sofa bed", "estimate": "$2,730" },
     { "item": "Hotel - Manchester", "detail": "Kimpton Clocktower, 1 room x 3 nights, booked (GBP 1,391.27)", "estimate": "~$1,850" },
     { "item": "Oasis tickets x 6 (two shows, three seats each)", "detail": "Face value to premium/resale, category dependent", "estimate": "$1,200 - $4,800+" },
     { "item": "Guided day tours (in cart, 6)", "detail": "Lisbon, Sintra, Madrid, Toledo/Segovia, Girona and London tours; not booked until checkout", "estimate": "$1,595" },
     { "item": "Public transport & day-trip trains", "detail": "Metro, airport buses, plus Cordoba rail for two", "estimate": "$250 - $350" }
   ],
-  "costTotal": "$23,815 - $31,795 (excl. meals and incidentals)",
+  "costTotal": "$23,811 - $31,791 (excl. meals and incidentals)",
   "costNote": "The scarce item now is the six concert tickets. The Manchester hotel is locked in for the show weekend, and everything else on this trip is abundant."
 }
