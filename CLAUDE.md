@@ -73,6 +73,6 @@ Deep links only (Maps URLs API): `src/lib/maps.js` builds `https://www.google.co
 - v0.27: May 28 also lists a Tripadvisor Douro Valley half-day tour as the alternative to the GetYourGuide full-day one (link and plan note only; the Tripadvisor page returned 403, so only the title from its URL is known).
 - v0.28: May 24 (Sintra day) also links a Tripadvisor Sintra private tour (all tickets included) as another option. The page was unreadable (403), so the plan text, cost rows and tours table are unchanged.
 - v0.29: Jun 10 has an 8:30 AM Express Tower of London tour (thetourguy.com, in cart, 3 adults, $330 total for 3, per the user). The thetourguy.com Sintra tour is deleted (May 24 keeps the day and the Tripadvisor link). Tours still 6, total $1,695; costTotal now $23,911 - $31,891.
-- v0.30: May 24 has the Tripadvisor Sintra Private Tour with All Tickets Included, 8:00 AM, $671.52 (assumed 2 adults, status in-cart because the booking state is unknown; no cancel-by date). Tours now 7, total $2,367; costTotal $24,583 - $32,563. The thetourguy.com cart is still 6 tours.
+- v0.30: May 24 has the Tripadvisor Sintra Private Tour with All Tickets Included, 8:00 AM, $671.52 (assumed 2 adults, status reserved (not booked, pay later); no cancel-by date). Tours now 7, total $2,367; costTotal $24,583 - $32,563. The thetourguy.com cart is still 6 tours.
 - Source: `iberian_grand_tour_lisbon_loop_2027.pdf` (as of 2026-10-24). Fares/rates are estimates.
 - Pages: repo Settings → Pages → Source must be "GitHub Actions".
