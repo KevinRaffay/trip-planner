@@ -95,6 +95,15 @@ export function MapLink({ href, children, className = 'maplink' }) {
   );
 }
 
+/** External web link (tour listing, booking page) that opens in a new tab. */
+export function ExtLink({ href, children }) {
+  return (
+    <a className="maplink" href={href} target="_blank" rel="noopener noreferrer">
+      <span aria-hidden="true">🔗</span> {children}<span className="sr-only"> (opens in a new tab)</span>
+    </a>
+  );
+}
+
 /** One transport leg, used on the Travel page and inside day cards. */
 export function LegCard({ leg, showDate = true }) {
   return (
