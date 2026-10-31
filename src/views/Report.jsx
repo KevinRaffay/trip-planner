@@ -124,6 +124,7 @@ export default function Report({ data }) {
                         const l = data.legs.find((x) => x.id === id);
                         return <div key={id} className="report__line">{l.mode === 'air' ? 'Flight' : 'Train'}: {l.from} to {l.to} ({l.carrier})</div>;
                       })}
+                      {(d.links ?? []).map((l) => <div key={l.url} className="report__line">Link: {l.label} ({l.url})</div>)}
                       {(d.tours ?? []).map((id) => {
                         const t = data.tours.find((x) => x.id === id);
                         return <div key={id} className="report__line">Tour {t.time}: {t.name} ({TOUR_STATUS[t.status].label})</div>;

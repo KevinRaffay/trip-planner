@@ -3,7 +3,7 @@ import { addDays, formatDay, diffDays } from '../lib/dates.js';
 import { travelersOn } from '../lib/filters.js';
 import { hrefTo } from '../lib/route.js';
 import { placeUrl, dayRouteUrl } from '../lib/maps.js';
-import { CityDot, GuideBlock, LegCard, MapLink, TourCard, cityOf, tagName } from './common.jsx';
+import { CityDot, ExtLink, GuideBlock, LegCard, MapLink, TourCard, cityOf, tagName } from './common.jsx';
 
 export default function DayDetail({ data, date, route }) {
   const day = data.days.find((d) => d.date === date);
@@ -36,6 +36,15 @@ export default function DayDetail({ data, date, route }) {
             {day.places.map((p) => <li key={p.query}><MapLink href={placeUrl(p.query)}>{p.name}</MapLink></li>)}
           </ul>
           {dayRoute && <p><MapLink href={dayRoute} className="btn">Route for the day</MapLink></p>}
+        </div>
+      )}
+
+      {day.links?.length > 0 && (
+        <div className="block">
+          <h2>Links</h2>
+          <ul className="places">
+            {day.links.map((l) => <li key={l.url}><ExtLink href={l.url}>{l.label}</ExtLink></li>)}
+          </ul>
         </div>
       )}
 
