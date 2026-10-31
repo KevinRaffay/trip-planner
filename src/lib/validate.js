@@ -31,6 +31,7 @@ export function validateTrip(t) {
     need(d.title && d.plan, `${d.date}: title and plan are required`);
     const places = d.places ?? [];
     need(places.length <= MAX_PLACES_PER_DAY, `${d.date}: ${places.length} places, max ${MAX_PLACES_PER_DAY} (Google caps route waypoints)`);
+    for (const k of d.links ?? []) need(k.label && (k.url ?? '').startsWith('https://'), `${d.date}: every link needs a label and an https url`);
     for (const p of places) need(p.name && p.query, `${d.date}: every place needs a name and a query`);
   }
   need(addDays(expect, -1) === t.trip.end, `days end at ${addDays(expect, -1)}, trip.end is ${t.trip.end}`);
