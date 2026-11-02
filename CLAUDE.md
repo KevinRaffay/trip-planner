@@ -84,5 +84,6 @@ Deep links only (Maps URLs API): `src/lib/maps.js` builds `https://www.google.co
 - v0.38: Viator Granada cave flamenco show (Cueva Los Amayas, Sacromonte) added to Jun 2 as an in-cart tour: 2 adults at the from-price $28.45 each ($56.90), start time TBC, free cancel 24h before. Tours total $1,925; costTotal +$57.
 - v0.39: lunch at Omka Kool (Moroccan, Calle Jardines 17, Granada) added to the Jun 2 plan and map stops; no reservation or price noted.
 - v0.40: Rua Augusta Arch (Lisbon) added to the May 22 plan and map stops, between the bifana stop and Santa Catarina.
+- v0.41: day pages are less repetitive: the Where you're staying card shows only on a stay's check-in day, and each city's guides (Lisbon viewpoints, Porto francesinha, Madrid free tapas) show only on the first day in that city (DayDetail.jsx). The Hotels page and print report still list everything.
 - Source: `iberian_grand_tour_lisbon_loop_2027.pdf` (as of 2026-10-24). Fares/rates are estimates.
 - Pages: repo Settings → Pages → Source must be "GitHub Actions".
