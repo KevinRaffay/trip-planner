@@ -15,7 +15,9 @@ export default function DayDetail({ data, date, route }) {
   const legs = day.legs.map((id) => data.legs.find((l) => l.id === id));
   const tours = (day.tours ?? []).map((id) => data.tours.find((x) => x.id === id));
   const dayRoute = dayRouteUrl(day, stay);
-  const guides = (data.guides ?? []).filter((g) => g.city === day.city);
+  // A city's guides (viewpoints, where to eat) show only on its first day there.
+  const firstDayHere = data.days.find((d) => d.city === day.city)?.date === date;
+  const guides = firstDayHere ? (data.guides ?? []).filter((g) => g.city === day.city) : [];
   const prev = data.days.find((d) => d.date === addDays(date, -1));
   const next = data.days.find((d) => d.date === addDays(date, 1));
   const n = diffDays(data.trip.start, date) + 1;
@@ -58,7 +60,7 @@ export default function DayDetail({ data, date, route }) {
         <div className="block"><h2>Getting around</h2><div className="grid">{legs.map((l) => <LegCard key={l.id} leg={l} showDate={false} />)}</div></div>
       )}
 
-      {stay && (
+      {stay && date === stay.checkIn && (
         <div className="block">
           <h2>Where you're staying</h2>
           <article className="card">
