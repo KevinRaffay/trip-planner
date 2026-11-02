@@ -1,6 +1,6 @@
 # trip-planner
 
-Itinerary, calendar and travel planner for **The Iberian Grand Tour** (May 21 – Jun 16, 2027): Lisbon, Porto, Madrid, Barcelona, Seville, London, Manchester (Oasis at the Etihad) and back.
+Itinerary, calendar and travel planner for **The Iberian Grand Tour** (May 21 – Jun 16, 2027): Lisbon, Porto, Seville, Cordoba, Granada, Madrid, London, Manchester (Oasis at the Etihad) and back.
 
 A static React app hosted on GitHub Pages: <https://kevinraffay.github.io/trip-planner/>
 
