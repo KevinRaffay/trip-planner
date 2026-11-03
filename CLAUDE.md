@@ -90,5 +90,6 @@ Deep links only (Maps URLs API): `src/lib/maps.js` builds `https://www.google.co
 - v0.44: May 25 lists Trattoria Donatella (Cais do Sodre) as a possible meal, named "Meal option: ...".
 - v0.45: May 22 main meal is Bairrices ("Main meal: Bairrices", first of the meal places; the plan text names it); the four "Meal option" spots are backups. Place query is name + city only (the map link gave no address).
 - v0.46: May 24 lists Trobadores (Chiado) as a possible meal, named "Meal option: Trobadores", next to Dinner: Java.
+- v0.47: May 22 adds Manteigaria (Av. 24 de Julho 50) as another "Meal option" backup, after Monte Mar.
 - Source: `iberian_grand_tour_lisbon_loop_2027.pdf` (as of 2026-10-24). Fares/rates are estimates.
 - Pages: repo Settings → Pages → Source must be "GitHub Actions".
