@@ -92,6 +92,6 @@ Deep links only (Maps URLs API): `src/lib/maps.js` builds `https://www.google.co
 - v0.46: May 24 lists Trobadores (Chiado) as a possible meal, named "Meal option: Trobadores", next to Dinner: Java.
 - v0.47: May 22 adds Manteigaria (Av. 24 de Julho 50) as another "Meal option" backup, after Monte Mar. May 22 now has 9 places, so it is route:false (no day-route button) and the max-places check in validate.js skips route:false days.
 - v0.48: May 25 adds "Drinks and snacks: BAHR & Terrace" (rooftop bar, Praca Luis de Camoes 2) as a place, a plan sentence, and a "RESERVE EARLY" bookingSequence item (when: later). Booking window and minimum spend unchecked.
-- v0.49: May 26 (Porto) adds Dinner: Mito (R. de Jose Falcao 183) with a RESERVE EARLY bookingSequence item, and two sunset-drinks places (BOSCO Porto, Musa das Virtudes). Landing is 8:25 PM and sunset (~9 PM, unchecked) is close, so the plan says it only works if the transfer is quick.
+- v0.49: May 27 (Porto) adds Dinner: Mito (R. de Jose Falcao 183) with a RESERVE EARLY bookingSequence item, and two sunset-drinks places (BOSCO Porto, Musa das Virtudes). Sunset (~9 PM) is unchecked; the fado show is kept as an evening alternative.
 - Source: `iberian_grand_tour_lisbon_loop_2027.pdf` (as of 2026-10-24). Fares/rates are estimates.
 - Pages: repo Settings → Pages → Source must be "GitHub Actions".
