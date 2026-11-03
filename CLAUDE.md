@@ -87,5 +87,6 @@ Deep links only (Maps URLs API): `src/lib/maps.js` builds `https://www.google.co
 - v0.41: day pages are less repetitive: the Where you're staying card shows only on a stay's check-in day, and each city's guides (Lisbon viewpoints, Porto francesinha, Madrid free tapas) show only on the first day in that city (DayDetail.jsx). The Hotels page and print report still list everything.
 - v0.42: the May 23 Belem walking tour (tour-lisbon-walk) is replaced by thetourguy Lisbon Food and Sightseeing Tour by Tuk Tuk (tour-lisbon-tuktuk): 2 adults at the from-price $142.68 each ($285.36), 4 hours, start time TBC, in cart, cancel by May 22. Belem is now an optional afternoon. Tours total $2,094; costTotal +$169.
 - v0.43: May 22 lists four possible meal spots as places (Portugália Cervejaria Cais do Sodré, Catch Me Lisboa, Donna Pizzeria Alcântara, Monte Mar Lisboa), named "Meal option: ..." and not part of a fixed plan.
+- v0.44: May 25 lists Trattoria Donatella (Cais do Sodre) as a possible meal, named "Meal option: ...".
 - Source: `iberian_grand_tour_lisbon_loop_2027.pdf` (as of 2026-10-24). Fares/rates are estimates.
 - Pages: repo Settings → Pages → Source must be "GitHub Actions".
