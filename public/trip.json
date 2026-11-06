@@ -105,6 +105,21 @@
       ]
     },
     {
+      "id": "london-where-to-eat",
+      "city": "london",
+      "title": "Where to eat: London",
+      "intro": "Places to eat, added from your saved Maps links.",
+      "spots": [
+        {
+          "rank": 1,
+          "name": "Browns Butlers Wharf",
+          "address": "Butlers Wharf, 26 Shad Thames, London SE1 2YG",
+          "query": "Browns Butlers Wharf, 26 Shad Thames, London SE1 2YG, United Kingdom",
+          "note": "Reservations recommended. On the Thames at Butlers Wharf, next to Tower Bridge and a short walk from the Cheval Three Quays. Menu, prices and opening hours were not checked, so look before booking. It is not yet on any day; Jun 15 (farewell dinner, which already has Gillray's) or an evening around Jun 9 or Jun 14 would fit."
+        }
+      ]
+    },
+    {
       "id": "madrid-free-tapas",
       "city": "madrid",
       "title": "Where to eat: bars with free tapas",
