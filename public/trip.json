@@ -233,6 +233,50 @@
       ]
     },
     {
+      "id": "madrid-where-to-eat",
+      "city": "madrid",
+      "title": "Where to eat: Madrid",
+      "intro": "Six classic Madrid stops from a food-tour list, in the order given (the order is not a ranking). The separate free-tapas card below covers bars where a drink comes with a tapa.",
+      "spots": [
+        {
+          "rank": 1,
+          "name": "Chocolat",
+          "query": "Chocolat, Madrid, Spain",
+          "note": "Fresh churros with thick hot chocolate; an easy way to start a morning."
+        },
+        {
+          "rank": 2,
+          "name": "La Casa del Abuelo",
+          "query": "La Casa del Abuelo, Madrid, Spain",
+          "note": "Known for shrimp in garlic and olive oil, served in a clay dish; good with the house wine."
+        },
+        {
+          "rank": 3,
+          "name": "Casa Toni",
+          "query": "Casa Toni, Madrid, Spain",
+          "note": "Old-school tapas bar known for offal, such as pig ears and sweetbreads off the hot plate."
+        },
+        {
+          "rank": 4,
+          "name": "Casa Amadeo (Los Caracoles)",
+          "query": "Casa Amadeo de los Caracoles, Madrid, Spain",
+          "note": "Specialises in snails in a chili sauce, plus pork dishes and sausages."
+        },
+        {
+          "rank": 5,
+          "name": "Posada de la Villa",
+          "query": "Posada de la Villa, Madrid, Spain",
+          "note": "Sit-down place for roast lamb."
+        },
+        {
+          "rank": 6,
+          "name": "Malacatín",
+          "query": "Malacatín, Madrid, Spain",
+          "note": "Cocido madrileño, the Madrid chickpea and meat stew: a heavy, traditional meal."
+        }
+      ]
+    },
+    {
       "id": "madrid-free-tapas",
       "city": "madrid",
       "title": "Where to eat: bars with free tapas",
