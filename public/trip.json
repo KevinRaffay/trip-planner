@@ -300,6 +300,46 @@
       ]
     },
     {
+      "id": "lisbon-where-to-eat",
+      "city": "lisbon",
+      "title": "Where to eat: Lisbon",
+      "intro": "Places from your list, in the order you gave them (the order is not a ranking).",
+      "spots": [
+        {
+          "rank": 1,
+          "name": "Trobadores",
+          "address": "Calçada de São Francisco 6A",
+          "query": "Trobadores, Calçada de São Francisco 6A, 1200-005 Lisboa, Portugal"
+        },
+        {
+          "rank": 2,
+          "name": "Gin Lovers",
+          "query": "Gin Lovers, Lisbon, Portugal"
+        },
+        {
+          "rank": 3,
+          "name": "Lumi Rooftop",
+          "query": "Lumi Rooftop, Lisbon, Portugal"
+        },
+        {
+          "rank": 4,
+          "name": "Leve Leve - Tapas Bar",
+          "query": "Leve Leve - Tapas Bar, Lisbon, Portugal"
+        },
+        {
+          "rank": 5,
+          "name": "Clube de Jornalistas",
+          "query": "Clube de Jornalistas, Lisbon, Portugal",
+          "note": "Close to the hotel. Possible first night: make reservations."
+        },
+        {
+          "rank": 6,
+          "name": "O Português Chiado",
+          "query": "O Português Chiado, Lisbon, Portugal"
+        }
+      ]
+    },
+    {
       "id": "lisbon-miradouros",
       "city": "lisbon",
       "title": "Viewpoints (miradouros)",
@@ -497,6 +537,7 @@
   "bookingSequence": [
     { "item": "Oasis tickets, Etihad Fri Jun 11 + Sat Jun 12", "bookable": "YES - DO THIS FIRST", "when": "now", "note": "Six tickets: three seats for each of the two shows. The hardest-to-get items in the trip. Official channels / face-value resale; the Tue Jun 8 and Tue Jun 15 shows are backups that still fit the trip frame." },
     { "item": "Sky Garden tickets, Jun 9", "bookable": "OPENS MAY 19", "when": "later", "note": "Free but timed; slots open about 3 weeks ahead, so book around May 19, 2027. Confirm the release day on the Sky Garden site." },
+    { "item": "Clube de Jornalistas dinner, Lisbon (possible first night, May 22)", "bookable": "RESERVE EARLY", "when": "later", "note": "Close to the hotel and a possible first-night dinner. Make a reservation; check their booking options." },
     { "item": "BAHR & Terrace rooftop table, May 25", "bookable": "RESERVE EARLY", "when": "later", "note": "Drinks and snacks on May 25 (Praça Luís de Camões 2, 5th floor, Bairro Alto). Book a table well ahead; it fills up. Check the booking window and any minimum spend on their site." },
     { "item": "Mito dinner, Porto, May 27", "bookable": "RESERVE EARLY", "when": "later", "note": "Dinner after sunset drinks (R. de José Falcão 183). Book a table well ahead; check the booking window on their site." },
     { "item": "Manchester hotel, Jun 10-13", "bookable": "BOOKED", "when": "done", "note": "Kimpton Clocktower. Free cancellation until Jun 3; after that the first night is charged." },
