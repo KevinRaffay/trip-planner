@@ -112,5 +112,6 @@ Deep links only (Maps URLs API): `src/lib/maps.js` builds `https://www.google.co
 - v0.66: The "unchecked / look before you go" wording is also trimmed from the Brasão Coliseu (Porto), Browns Butlers Wharf and The Marquis (London) notes (user request); Browns keeps "Reservations recommended".
 - v0.67: Seville guide gained a seventh spot, Casa Ricardo (antigua Casa Ovidio), C. Hernán Cortés 2 (name and address read from the Maps page in the built-in browser), with no note like the other Seville spots. Guide intro no longer says "Six places".
 - v0.68: Seville guide gained an eighth spot, La Campana Confectionery (name from the Maps page title; the page exposed no address, so none is shown), no note. Stacked on the Casa Ricardo PR.
+- v0.69: Seville guide gained seven more spots from the user's Maps links (names from the resolved place URLs, no addresses, no notes): Bar Casa Morales, Bar Estrella Tapas, Las Teresas, Taberna Álvaro Peregil - La Goleta, Il Ristorantino Dell'Avvocato, Patanchón Bar de Tapas, Bar Catedral. The card now has 15 spots. Stacked on the Casa Ricardo / La Campana PR.
 - Source: `iberian_grand_tour_lisbon_loop_2027.pdf` (as of 2026-10-24). Fares/rates are estimates.
 - Pages: repo Settings → Pages → Source must be "GitHub Actions".

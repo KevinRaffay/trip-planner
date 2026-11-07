@@ -172,6 +172,41 @@
           "rank": 8,
           "name": "La Campana Confectionery",
           "query": "La Campana Confectionery, Seville, Spain"
+        },
+        {
+          "rank": 9,
+          "name": "Bar Casa Morales",
+          "query": "Bar Casa Morales, Seville, Spain"
+        },
+        {
+          "rank": 10,
+          "name": "Bar Estrella Tapas",
+          "query": "Bar Estrella Tapas, Seville, Spain"
+        },
+        {
+          "rank": 11,
+          "name": "Las Teresas",
+          "query": "Las Teresas, Seville, Spain"
+        },
+        {
+          "rank": 12,
+          "name": "Taberna Álvaro Peregil - La Goleta",
+          "query": "Taberna Álvaro Peregil - La Goleta, Seville, Spain"
+        },
+        {
+          "rank": 13,
+          "name": "Il Ristorantino Dell'Avvocato",
+          "query": "Il Ristorantino Dell'Avvocato Sevilla, Seville, Spain"
+        },
+        {
+          "rank": 14,
+          "name": "Patanchón Bar de Tapas",
+          "query": "Patanchón Bar de Tapas, Seville, Spain"
+        },
+        {
+          "rank": 15,
+          "name": "Bar Catedral",
+          "query": "Bar Catedral, Seville, Spain"
         }
       ]
     },
