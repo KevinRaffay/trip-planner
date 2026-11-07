@@ -39,8 +39,8 @@ export function GuideBlock({ guide }) {
               {s.pick && <span className="badge badge--ok">Top pick</span>}
               <MapLink href={placeUrl(s.query)}>Map</MapLink>
             </div>
-            <p className="dim small">{s.address}</p>
-            <p className="guide__note">{s.note}</p>
+            {s.address && <p className="dim small">{s.address}</p>}
+            {s.note && <p className="guide__note">{s.note}</p>}
           </li>
         ))}
       </ol>
