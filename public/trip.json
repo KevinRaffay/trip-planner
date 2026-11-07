@@ -183,6 +183,28 @@
       ]
     },
     {
+      "id": "london-thames-clippers",
+      "city": "london",
+      "title": "By river: Thames Clippers",
+      "intro": "An unscheduled idea for a free half-day in London: the Uber Boat by Thames Clippers river bus. It is a commuter and tourist boat between piers (not a guided cruise), so use it as a scenic way to get across the city. It is not on any day yet.",
+      "tip": "Fares (adult, from the Thames Clippers ticket page; check the current prices): hop-on hop-off 1 day about GBP 29.30 online or in the app (GBP 32.60 at the pier); a single across Central and East zones about GBP 12.20 online or in the app. Your ticket must cover every zone you cross. Online and in-app are cheaper than the pier, and buying hop-on hop-off several days ahead is cheaper again. The page's pay-as-you-go Oyster and contactless fares looked out of date, so confirm them. Look up sailing times in the app or the journey planner.",
+      "source": { "name": "Uber Boat by Thames Clippers: booking", "url": "https://www.thamesclippers.com/booking" },
+      "spots": [
+        {
+          "rank": 1,
+          "name": "Tower Millennium Pier",
+          "query": "Tower Millennium Pier, London",
+          "note": "Boarding pier by the Tower of London, close to the Cheval Three Quays."
+        },
+        {
+          "rank": 2,
+          "name": "Greenwich Pier",
+          "query": "Greenwich Pier, London",
+          "note": "A popular ride east from the Tower. Tower to Greenwich needs a ticket covering the Central and East zones."
+        }
+      ]
+    },
+    {
       "id": "london-where-to-eat",
       "city": "london",
       "title": "Where to eat: London",
