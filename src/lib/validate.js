@@ -65,6 +65,8 @@ export function validateTrip(t) {
   for (const g of t.guides ?? []) {
     need(cityIds.has(g.city), `guide "${g.id}": unknown city "${g.city}"`);
     need(g.title && Array.isArray(g.spots) && g.spots.length > 0, `guide "${g.id}": title and spots are required`);
+    need(!g.date || t.days.some((d) => d.date === g.date), `guide "${g.id}": date ${g.date} is not a trip day`);
+    need(!g.walk || (g.spots ?? []).length <= 11, `guide "${g.id}": a walking route holds at most 11 stops`);
     need(!g.source || (g.source.name && (g.source.url ?? '').startsWith('https://')), `guide "${g.id}": source needs a name and an https url`);
     for (const s of g.spots ?? []) need(s.name && s.query, `guide "${g.id}": every spot needs a name and a map query`);
   }

@@ -17,7 +17,8 @@ export default function DayDetail({ data, date, route }) {
   const dayRoute = dayRouteUrl(day, stay);
   // A city's guides (viewpoints, where to eat) show only on its first day there.
   const firstDayHere = data.days.find((d) => d.city === day.city)?.date === date;
-  const guides = firstDayHere ? (data.guides ?? []).filter((g) => g.city === day.city) : [];
+  // A guide with a date (a walking tour) shows only on that day.
+  const guides = (data.guides ?? []).filter((g) => (g.date ? g.date === date : firstDayHere && g.city === day.city));
   const prev = data.days.find((d) => d.date === addDays(date, -1));
   const next = data.days.find((d) => d.date === addDays(date, 1));
   const n = diffDays(data.trip.start, date) + 1;

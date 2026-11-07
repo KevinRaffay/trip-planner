@@ -105,6 +105,84 @@
       ]
     },
     {
+      "id": "london-soho-walk",
+      "city": "london",
+      "date": "2027-06-13",
+      "walk": true,
+      "title": "Soho walking tour",
+      "intro": "About 1.5 miles (2.4 km), 90 minutes to 2 hours at a relaxed pace, flat and paved, and free apart from food stops. The numbers are the walking order, not a ranking. Tap the full-route link to open the whole walk in Google Maps.",
+      "tip": "Timing: weekday mornings are quietest and Berwick Street Market is best before noon. Old Compton and Carnaby Streets feel livelier on afternoons. Avoid Saturday evenings after 7 PM if you want room to move. Check opening hours before you go.",
+      "source": { "name": "London Insiders: Soho walking route", "url": "https://londoninsiders.com/guides/soho-walking-route/" },
+      "spots": [
+        {
+          "rank": 1,
+          "name": "Denmark Street",
+          "query": "Denmark Street, London",
+          "note": "Start from Tottenham Court Road station (glance at the big Outernet screen on the way). London's historic music street, tied to the Rolling Stones, Bowie and the Sex Pistols."
+        },
+        {
+          "rank": 2,
+          "name": "Soho Square",
+          "query": "Soho Square, London W1D 3QS",
+          "note": "Gardens dating from 1681, with a Tudor-style timber hut and a statue of Charles II. A good place to sit for a minute."
+        },
+        {
+          "rank": 3,
+          "name": "Frith Street",
+          "query": "Frith Street, London",
+          "note": "Mozart lived at no. 20 (blue plaque). Bar Italia, no. 22, has been open since 1949 and stays open until 5 AM. Ronnie Scott's jazz club is at no. 47."
+        },
+        {
+          "rank": 4,
+          "name": "Greek Street",
+          "query": "Maison Bertaux, 28 Greek Street, London W1D 5DQ",
+          "note": "Maison Bertaux, London's oldest patisserie (since 1871), for a pastry or afternoon tea. The Coach and Horses pub is at no. 29."
+        },
+        {
+          "rank": 5,
+          "name": "The French House",
+          "query": "The French House, 49 Dean Street, London",
+          "note": "Wine-focused pub with a long history among French exiles, writers and artists."
+        },
+        {
+          "rank": 6,
+          "name": "Old Compton Street",
+          "query": "Old Compton Street, London",
+          "note": "Long-standing centre of London's LGBTQ+ community and one of the most photographed stretches of the walk. The Admiral Duncan pub at no. 54 has a memorial to the 1999 bombing."
+        },
+        {
+          "rank": 7,
+          "name": "St Anne's Churchyard",
+          "query": "St Anne's Churchyard, Wardour Street, London",
+          "note": "Quiet garden on the site of a Blitz-damaged church. Easy to skip if you are short of time."
+        },
+        {
+          "rank": 8,
+          "name": "34 Berwick Street and Berwick Street Market",
+          "query": "34 Berwick Street, Soho, London",
+          "note": "34 Berwick Street is the Oasis (What's the Story) Morning Glory? album cover location. The street market has run since the early 1800s and is best before noon."
+        },
+        {
+          "rank": 9,
+          "name": "John Snow pump",
+          "query": "The John Snow, 39 Broadwick Street, London",
+          "note": "A replica of the Broad Street pump from the 1854 cholera story, outside the John Snow pub at Broadwick and Poland Streets."
+        },
+        {
+          "rank": 10,
+          "name": "Carnaby Street",
+          "query": "Carnaby Street, London W1B 5PW",
+          "note": "1960s counterculture street, now independent and flagship shops. The Spirit of Soho mural is at the Ganton Street corner."
+        },
+        {
+          "rank": 11,
+          "name": "Kingly Court",
+          "query": "Kingly Court, Carnaby, London",
+          "note": "Finish here, through an archway off Carnaby Street. A three-level courtyard of restaurants and bars, with Dishoom on the ground floor."
+        }
+      ]
+    },
+    {
       "id": "london-where-to-eat",
       "city": "london",
       "title": "Where to eat: London",
@@ -611,7 +689,7 @@
     { "date": "2027-06-10", "city": "manchester", "stay": "manchester", "title": "Train to Manchester", "tags": ["travel","sightseeing","food"], "legs": ["train-lon-man"], "plan": "Check out of the Cheval Three Quays after a relaxed morning, then a midday Advance train from Euston (Avanti, 2h07), a named train chosen so there is time to collect bags; drop bags at the Kimpton Clocktower (check-in from 3 PM), a 10-minute walk from Piccadilly. Afternoon: Science and Industry Museum or a Man City stadium tour; dinner in Spinningfields.", "places": [{"name":"Science and Industry Museum","query":"Science and Industry Museum, Manchester"},{"name":"Spinningfields","query":"Spinningfields, Manchester"}] },
     { "date": "2027-06-11", "city": "manchester", "stay": "manchester", "title": "OASIS - Night one", "tags": ["concert", "sightseeing", "food"], "legs": [], "highlight": true, "plan": "OASIS AT THE ETIHAD, NIGHT ONE. Easy day in the Northern Quarter: record shops, cafes, Oasis's old stomping ground. Early dinner, then Metrolink to Etihad Campus.", "places": [{"name":"Northern Quarter","query":"Northern Quarter, Manchester"},{"name":"Etihad Stadium","query":"Etihad Stadium, Manchester"}] },
     { "date": "2027-06-12", "city": "manchester", "stay": "manchester", "title": "OASIS - Night two", "tags": ["concert"], "legs": [], "highlight": true, "plan": "OASIS AT THE ETIHAD, NIGHT TWO. Recover slowly before the Saturday show." },
-    { "date": "2027-06-13", "city": "london", "stay": "london-2", "title": "Back to London", "tags": ["travel", "sightseeing", "food"], "legs": ["train-man-lon"], "plan": "Avanti back to Euston by midday. Proper Sunday roast; lazy afternoon at the National Gallery or along the South Bank.", "places": [{"name":"National Gallery","query":"National Gallery, London"}] },
+    { "date": "2027-06-13", "city": "london", "stay": "london-2", "title": "Back to London", "tags": ["travel", "sightseeing", "food"], "legs": ["train-man-lon"], "plan": "Avanti back to Euston by midday. Proper Sunday roast. Afternoon: the Soho walking tour below, or the National Gallery and the South Bank.", "places": [{"name":"National Gallery","query":"National Gallery, London"}] },
     { "date": "2027-06-14", "city": "london", "stay": "london-2", "title": "Tower of London tour", "tags": ["sightseeing","tour"], "legs": [], "plan": "8:30 AM Express Tower of London tour with Crown Jewels access (about 1.5 hours guided, then free time in the White Tower and Jewel House; meet outside the Tower gift shop, a short walk from the Cheval Three Quays). Afternoon free. Evening: Devour historic pubs food tour in the City of London (about 3.5 hours, four tastings with drinks, from about $97 per person per the tour page; not booked, so check dates and times).", "places": [{"name":"Tower of London","query":"Tower of London"},{"name":"Devour pubs tour meeting point (St Andrew Holborn gardens)","query":"The Gardens of St Andrew's Church Holborn, 5 St Andrew Street, London EC4A 3AF"}], "tours": ["tour-tower"] },
     { "date": "2027-06-15", "city": "london", "stay": "london-2", "title": "Changing of the Guard tour", "tags": ["sightseeing","food","tour"], "legs": [], "plan": "Morning: Westminster Abbey, Big Ben and Changing of the Guard tour (about 3 hours, start time to be confirmed; thetourguy.com, in cart). Borough Market for a late lunch. Dinner is open.", "places": [{"name":"Westminster Abbey","query":"Westminster Abbey, London"},{"name":"Borough Market","query":"Borough Market, London"}], "tours": ["tour-guard"] },
     { "date": "2027-06-16", "city": "london", "stay": "london-2", "title": "Fly home", "tags": ["travel","departure"], "legs": ["air-lhr-lax"], "plan": "Relaxed morning and an early lunch, then your pre-booked Transferz Executive car picks you up at the Cheval Three Quays at 12:00 PM (about 59 minutes to Heathrow, estimated arrival 12:59 PM, room for 3 passengers), which leaves about 3.5 hours before AA 135 at 4:25 PM. All three of you land at LAX at 7:35 PM the same evening." }
