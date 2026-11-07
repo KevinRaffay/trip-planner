@@ -211,6 +211,28 @@
       ]
     },
     {
+      "id": "manchester-where-to-eat",
+      "city": "manchester",
+      "title": "Where to eat: Manchester",
+      "intro": "Places from your list.",
+      "spots": [
+        {
+          "rank": 1,
+          "name": "Mackie Mayor",
+          "address": "Smithfield Market Hall, 1 Eagle St, Manchester M4 5BU",
+          "query": "Mackie Mayor, Smithfield Market Hall, 1 Eagle St, Manchester M4 5BU, United Kingdom",
+          "note": "First night option."
+        },
+        {
+          "rank": 2,
+          "name": "The Peveril of the Peak",
+          "address": "127 Great Bridgewater St, Manchester M1 5JQ",
+          "query": "The Peveril of the Peak, 127 Great Bridgewater St, Manchester M1 5JQ, United Kingdom",
+          "note": "Near the hotel."
+        }
+      ]
+    },
+    {
       "id": "madrid-free-tapas",
       "city": "madrid",
       "title": "Where to eat: bars with free tapas",
