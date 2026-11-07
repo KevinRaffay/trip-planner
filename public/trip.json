@@ -167,6 +167,11 @@
           "name": "Casa Ricardo (antigua Casa Ovidio)",
           "address": "C. Hernán Cortés 2, Casco Antiguo, 41002 Seville",
           "query": "Casa Ricardo antigua Casa Ovidio, C. Hernán Cortés 2, 41002 Sevilla, Spain"
+        },
+        {
+          "rank": 8,
+          "name": "La Campana Confectionery",
+          "query": "La Campana Confectionery, Seville, Spain"
         }
       ]
     },
