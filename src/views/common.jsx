@@ -2,7 +2,7 @@ import React from 'react';
 import { formatDay } from '../lib/dates.js';
 import { EMPTY_FILTERS, isFiltering } from '../lib/filters.js';
 import { setFilters } from '../lib/route.js';
-import { legUrl, legLinkLabel, placeUrl } from '../lib/maps.js';
+import { legUrl, legLinkLabel, placeUrl, directionsUrl } from '../lib/maps.js';
 
 export const cityOf = (data, id) => data.cities.find((c) => c.id === id);
 export const tagName = (data, id) => data.tags.find((t) => t.id === id)?.name ?? id;
@@ -31,6 +31,9 @@ export function GuideBlock({ guide }) {
     <div className="block">
       <h2>{guide.title}</h2>
       {guide.intro && <p className="dim">{guide.intro}</p>}
+      {guide.walk && guide.spots.length > 1 && (
+        <p><MapLink href={directionsUrl({ origin: guide.spots[0].query, destination: guide.spots[guide.spots.length - 1].query, waypoints: guide.spots.slice(1, -1).map((s) => s.query), mode: 'walking' })}>Walk the whole route</MapLink></p>
+      )}
       <ol className="guide">
         {guide.spots.map((s) => (
           <li key={s.query}>
