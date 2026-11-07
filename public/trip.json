@@ -130,7 +130,7 @@
       "id": "seville-where-to-eat",
       "city": "seville",
       "title": "Where to eat: Seville",
-      "intro": "Six places from your list, in the order you gave them (the order is not a ranking).",
+      "intro": "Places from your list, in the order you gave them (the order is not a ranking).",
       "spots": [
         {
           "rank": 1,
@@ -161,6 +161,52 @@
           "rank": 6,
           "name": "La Sacristía",
           "query": "La Sacristía Tapas, Seville, Spain"
+        },
+        {
+          "rank": 7,
+          "name": "Casa Ricardo (antigua Casa Ovidio)",
+          "address": "C. Hernán Cortés 2, Casco Antiguo, 41002 Seville",
+          "query": "Casa Ricardo antigua Casa Ovidio, C. Hernán Cortés 2, 41002 Sevilla, Spain"
+        },
+        {
+          "rank": 8,
+          "name": "La Campana Confectionery",
+          "query": "La Campana Confectionery, Seville, Spain"
+        },
+        {
+          "rank": 9,
+          "name": "Bar Casa Morales",
+          "query": "Bar Casa Morales, Seville, Spain"
+        },
+        {
+          "rank": 10,
+          "name": "Bar Estrella Tapas",
+          "query": "Bar Estrella Tapas, Seville, Spain"
+        },
+        {
+          "rank": 11,
+          "name": "Las Teresas",
+          "query": "Las Teresas, Seville, Spain"
+        },
+        {
+          "rank": 12,
+          "name": "Taberna Álvaro Peregil - La Goleta",
+          "query": "Taberna Álvaro Peregil - La Goleta, Seville, Spain"
+        },
+        {
+          "rank": 13,
+          "name": "Il Ristorantino Dell'Avvocato",
+          "query": "Il Ristorantino Dell'Avvocato Sevilla, Seville, Spain"
+        },
+        {
+          "rank": 14,
+          "name": "Patanchón Bar de Tapas",
+          "query": "Patanchón Bar de Tapas, Seville, Spain"
+        },
+        {
+          "rank": 15,
+          "name": "Bar Catedral",
+          "query": "Bar Catedral, Seville, Spain"
         }
       ]
     },
