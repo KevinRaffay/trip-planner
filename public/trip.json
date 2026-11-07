@@ -127,6 +127,50 @@
       ]
     },
     {
+      "id": "seville-where-to-eat",
+      "city": "seville",
+      "title": "Where to eat: Seville",
+      "intro": "Six places from your list, in the order you gave them (the order is not a ranking).",
+      "spots": [
+        {
+          "rank": 1,
+          "name": "Alfarería 21 (Casa Montalván)",
+          "query": "Alfarería 21 - Casa Montalván, Seville, Spain",
+          "note": "Added from your list. Not reviewed here: menu, prices, hours and whether it takes bookings were not checked, so look before you go."
+        },
+        {
+          "rank": 2,
+          "name": "Bar Santa Cruz \"Las Columnas\"",
+          "query": "Bodega Santa Cruz Las Columnas, Seville, Spain",
+          "note": "Added from your list. Not reviewed here: menu, prices, hours and whether it takes bookings were not checked, so look before you go."
+        },
+        {
+          "rank": 3,
+          "name": "Bodeguita Blanco Cerrillo",
+          "query": "Bodeguita Blanco Cerrillo, Seville, Spain",
+          "note": "Added from your list. Not reviewed here: menu, prices, hours and whether it takes bookings were not checked, so look before you go."
+        },
+        {
+          "rank": 4,
+          "name": "Bodeguita Romero",
+          "query": "Bodeguita Romero, Seville, Spain",
+          "note": "Added from your list. Not reviewed here: menu, prices, hours and whether it takes bookings were not checked, so look before you go."
+        },
+        {
+          "rank": 5,
+          "name": "El Rinconcillo",
+          "query": "El Rinconcillo, Seville, Spain",
+          "note": "Added from your list. Not reviewed here: menu, prices, hours and whether it takes bookings were not checked, so look before you go."
+        },
+        {
+          "rank": 6,
+          "name": "La Sacristía",
+          "query": "La Sacristía Tapas, Seville, Spain",
+          "note": "Added from your list. Not reviewed here: menu, prices, hours and whether it takes bookings were not checked, so look before you go."
+        }
+      ]
+    },
+    {
       "id": "madrid-free-tapas",
       "city": "madrid",
       "title": "Where to eat: bars with free tapas",
