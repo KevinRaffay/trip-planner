@@ -333,6 +333,26 @@
       ]
     },
     {
+      "id": "granada-where-to-eat",
+      "city": "granada",
+      "title": "Where to eat: Granada",
+      "intro": "Places from your list. Many Granada bars bring a free tapa with each drink.",
+      "spots": [
+        {
+          "rank": 1,
+          "name": "Bar Aliatar Los Caracoles",
+          "query": "Bar Aliatar Los Caracoles, Granada, Spain",
+          "note": "Free tapas with your drink. Get the snails."
+        },
+        {
+          "rank": 2,
+          "name": "Restaurante Oliver",
+          "query": "Restaurante Oliver, Granada, Spain",
+          "note": "Traditional venue with a terrace, known for tapas, plus Andalusian rice, seafood and meat dishes."
+        }
+      ]
+    },
+    {
       "id": "madrid-where-to-eat",
       "city": "madrid",
       "title": "Where to eat: Madrid",
