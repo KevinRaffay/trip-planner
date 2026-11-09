@@ -205,6 +205,35 @@
       ]
     },
     {
+      "id": "london-changing-guard",
+      "city": "london",
+      "date": "2027-06-15",
+      "title": "Changing of the Guard schedule",
+      "intro": "Per the Household Division's published schedule, the King's Guard changes at Buckingham Palace on Monday, Wednesday and Friday at 11:00 AM (Windsor Castle has its own change on Tuesday, Thursday and Saturday). On Sundays there is a Sunday Parade at 10:00 AM, and on the other days a smaller Captain's Inspection at 3:00 PM. The ceremony lasts about 45 minutes. The numbers are the order the guards move, not a ranking.",
+      "tip": "Heads-up: Jun 15, 2027 is a Tuesday, so on that pattern there is no full Changing of the Guard at the palace on your tour day. Monday Jun 14 and Wednesday Jun 16 are palace days, but Jun 14 starts with the 8:30 AM Tower tour and Jun 16 has the 12:00 PM Heathrow car. Ask thetourguy what the tour shows on a Tuesday. The calendar only lists the current months, so 2027 dates are not posted yet; check it closer to the trip. The ceremony can be changed or cancelled at short notice, especially in wet weather, as late as 10:45 AM. Arrive early for a good view. One page of the source gives 10:45 AM as the start time and others give 11:00 AM.",
+      "source": { "name": "Household Division: Changing the Guard", "url": "https://www.householddivision.org.uk/changing-the-guard-calendar" },
+      "spots": [
+        {
+          "rank": 1,
+          "name": "St James's Palace",
+          "query": "St James's Palace, Marlborough Road, London SW1A 1BS",
+          "note": "The Old Guard forms up in Friary Court, then marches down The Mall, leaving at about 10:43 AM."
+        },
+        {
+          "rank": 2,
+          "name": "Wellington Barracks",
+          "query": "Wellington Barracks, Birdcage Walk, London",
+          "note": "The New Guard forms up here and leaves at about 10:57 AM for the palace."
+        },
+        {
+          "rank": 3,
+          "name": "Buckingham Palace",
+          "query": "Buckingham Palace, London",
+          "note": "The handover happens in the forecourt from about 11:00 AM; the Old Guard leaves around 11:35 to 11:40 AM."
+        }
+      ]
+    },
+    {
       "id": "london-where-to-eat",
       "city": "london",
       "title": "Where to eat: London",
@@ -733,7 +762,7 @@
     { "date": "2027-06-12", "city": "manchester", "stay": "manchester", "title": "OASIS - Night two", "tags": ["concert"], "legs": [], "highlight": true, "plan": "OASIS AT THE ETIHAD, NIGHT TWO. Recover slowly before the Saturday show." },
     { "date": "2027-06-13", "city": "london", "stay": "london-2", "title": "Back to London", "tags": ["travel", "sightseeing", "food"], "legs": ["train-man-lon"], "plan": "Avanti back to Euston by midday. Proper Sunday roast. Afternoon: the Soho walking tour below, or the National Gallery and the South Bank.", "places": [{"name":"National Gallery","query":"National Gallery, London"}] },
     { "date": "2027-06-14", "city": "london", "stay": "london-2", "title": "Tower of London tour and Camden Town", "tags": ["sightseeing","tour","food"], "legs": [], "plan": "8:30 AM Express Tower of London tour with Crown Jewels access (about 1.5 hours guided, then free time in the White Tower and Jewel House; meet outside the Tower gift shop, a short walk from the Cheval Three Quays). Afternoon: a trip to Camden Town via Piccadilly Circus. Camden Market and Camden Lock, then the pubs The Hawley Arms, The Dublin Castle and The Edinboro Castle (none booked; check opening hours, and leave time to get back for the evening tour). Evening: Devour historic pubs food tour in the City of London (about 3.5 hours, four tastings with drinks, from about $97 per person per the tour page; not booked, so check dates and times).", "places": [{"name":"Tower of London","query":"Tower of London"},{"name":"Piccadilly Circus","query":"Piccadilly Circus, London, UK"},{"name":"Camden Market","query":"Camden Market, 54-56 Camden Lock Pl, London NW1 8AF, United Kingdom"},{"name":"The Hawley Arms","query":"The Hawley Arms, 2 Castlehaven Rd, London NW1 8QU, United Kingdom"},{"name":"The Dublin Castle","query":"The Dublin Castle, 94 Parkway, London NW1 7AN, United Kingdom"},{"name":"The Edinboro Castle","query":"The Edinboro Castle, 57 Mornington Terrace, London NW1 7RU, United Kingdom"},{"name":"Devour pubs tour meeting point (St Andrew Holborn gardens)","query":"The Gardens of St Andrew's Church Holborn, 5 St Andrew Street, London EC4A 3AF"}], "tours": ["tour-tower"], "route": false },
-    { "date": "2027-06-15", "city": "london", "stay": "london-2", "title": "Changing of the Guard tour", "tags": ["sightseeing","food","tour"], "legs": [], "plan": "Morning: Westminster Abbey, Big Ben and Changing of the Guard tour (about 3 hours, start time to be confirmed; thetourguy.com, in cart). Borough Market for a late lunch. Dinner is open.", "places": [{"name":"Westminster Abbey","query":"Westminster Abbey, London"},{"name":"Borough Market","query":"Borough Market, London"}], "tours": ["tour-guard"] },
+    { "date": "2027-06-15", "city": "london", "stay": "london-2", "title": "Changing of the Guard tour", "tags": ["sightseeing","food","tour"], "legs": [], "plan": "Morning: Westminster Abbey, Big Ben and Changing of the Guard tour (about 3 hours, start time to be confirmed; thetourguy.com, in cart). Borough Market for a late lunch. Dinner is open. Note: the palace Changing of the Guard is held Monday, Wednesday and Friday at 11 AM, and Jun 15 is a Tuesday, so check what the tour shows (see the schedule card below).", "places": [{"name":"Westminster Abbey","query":"Westminster Abbey, London"},{"name":"Borough Market","query":"Borough Market, London"}], "tours": ["tour-guard"] },
     { "date": "2027-06-16", "city": "london", "stay": "london-2", "title": "Fly home", "tags": ["travel","departure"], "legs": ["air-lhr-lax"], "plan": "Relaxed morning and an early lunch, then your pre-booked Transferz Executive car picks you up at the Cheval Three Quays at 12:00 PM (about 59 minutes to Heathrow, estimated arrival 12:59 PM, room for 3 passengers), which leaves about 3.5 hours before AA 135 at 4:25 PM. All three of you land at LAX at 7:35 PM the same evening." }
   ],
 
