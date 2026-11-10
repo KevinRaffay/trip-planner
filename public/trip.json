@@ -237,17 +237,146 @@
       "id": "london-where-to-eat",
       "city": "london",
       "title": "Where to eat: London",
-      "intro": "Places to eat, added from your saved Maps links.",
+      "intro": "Places to eat and drink from your saved Maps links, in the order you listed them (the order is not a ranking). Several are pubs. Check opening hours and food service before you go.",
       "spots": [
         {
           "rank": 1,
+          "name": "Jamaica Wine House",
+          "address": "St Michaels Alley, Cornhill, London EC3V 9DS",
+          "query": "Jamaica Wine House, St Michaels Alley, Leadenhall Market, London EC3V 9DS"
+        },
+        {
+          "rank": 2,
+          "name": "The Pommelers Rest",
+          "address": "196-198 Tower Bridge Road, London SE1 2UN",
+          "query": "The Pommelers Rest, 196-198 Tower Bridge Road, London SE1 2UN"
+        },
+        {
+          "rank": 3,
+          "name": "The Hung Drawn & Quartered",
+          "query": "The Hung Drawn & Quartered, 27 Great Tower Street, London EC3R 7QQ"
+        },
+        {
+          "rank": 4,
+          "name": "The Lord Aberconway",
+          "address": "72 Old Broad Street, London EC2M 1QT",
+          "query": "The Lord Aberconway, 72 Old Broad Street, London EC2M 1QT"
+        },
+        {
+          "rank": 5,
+          "name": "The Railway Tavern",
+          "address": "15 Liverpool Street, London EC2M 7NX",
+          "query": "The Railway Tavern, 15 Liverpool Street, London EC2M 7NX"
+        },
+        {
+          "rank": 6,
+          "name": "Turnips (Borough Market greengrocer)",
+          "query": "Turnips, Borough Market, London"
+        },
+        {
+          "rank": 7,
+          "name": "The Ginger Pig",
+          "query": "The Ginger Pig, Borough Market, London"
+        },
+        {
+          "rank": 8,
+          "name": "The Black Pig",
+          "query": "The Black Pig, Jubilee Place, Borough Market, London"
+        },
+        {
+          "rank": 9,
+          "name": "The Old Queens Head",
+          "address": "44 Essex Road, Islington, London N1 8LN",
+          "query": "The Old Queens Head, 44 Essex Road, London N1 8LN"
+        },
+        {
+          "rank": 10,
+          "name": "The George",
+          "query": "The George, Great Portland Street, London W1W 7NT",
+          "note": "Sunday roast on Jun 13: book a table in advance."
+        },
+        {
+          "rank": 11,
+          "name": "The Devonshire",
+          "address": "17 Denman Street, Soho, London W1D 7HW",
+          "query": "The Devonshire, 17 Denman Street, London W1D 7HW"
+        },
+        {
+          "rank": 12,
+          "name": "The Churchill Arms",
+          "address": "119 Kensington Church Street, London W8 4BY",
+          "query": "The Churchill Arms, 119 Kensington Church Street, London W8 4BY"
+        },
+        {
+          "rank": 13,
+          "name": "Founder's Arms",
+          "address": "52 Hopton Street, Southwark, London SE1 9JH",
+          "query": "The Founders Arms, 52 Hopton Street, London SE1 9JH"
+        },
+        {
+          "rank": 14,
+          "name": "OXO Restaurant",
+          "query": "OXO Tower Restaurant, The Queens Walk, London SE1 9PH"
+        },
+        {
+          "rank": 15,
+          "name": "The Anchor & Hope",
+          "address": "36 The Cut, Waterloo, London SE1 8LP",
+          "query": "The Anchor & Hope, 36 The Cut, London SE1 8LP"
+        },
+        {
+          "rank": 16,
+          "name": "Blacklock City",
+          "query": "Blacklock City, Eastcheap, London"
+        },
+        {
+          "rank": 17,
+          "name": "The Ship, Soho",
+          "query": "The Ship, Wardour Street, Soho, London"
+        },
+        {
+          "rank": 18,
+          "name": "The Edinboro Castle",
+          "address": "57 Mornington Terrace, London NW1 7RU",
+          "query": "The Edinboro Castle, 57 Mornington Terrace, London NW1 7RU, United Kingdom",
+          "note": "Also a stop on the Jun 14 Camden Town afternoon."
+        },
+        {
+          "rank": 19,
+          "name": "Town of Ramsgate",
+          "address": "62 Wapping High Street, Wapping, London E1W 2PN",
+          "query": "The Town of Ramsgate, 62 Wapping High Street, London E1W 2PN"
+        },
+        {
+          "rank": 20,
+          "name": "The Dublin Castle",
+          "address": "94 Parkway, London NW1 7AN",
+          "query": "The Dublin Castle, 94 Parkway, London NW1 7AN, United Kingdom",
+          "note": "Also a stop on the Jun 14 Camden Town afternoon."
+        },
+        {
+          "rank": 21,
+          "name": "John Snow",
+          "address": "39 Broadwick Street, Soho, London W1F 9QJ",
+          "query": "The John Snow, 39 Broadwick Street, London",
+          "note": "Also a stop on the Jun 13 Soho walking tour."
+        },
+        {
+          "rank": 22,
+          "name": "Ye Olde Cheshire Cheese",
+          "address": "145 Fleet Street, London EC4A 2BU",
+          "query": "Ye Olde Cheshire Cheese, 145 Fleet Street, London EC4A 2BU",
+          "note": "Visit after the Sunday roast on Jun 13."
+        },
+        {
+          "rank": 23,
           "name": "Browns Butlers Wharf",
           "address": "Butlers Wharf, 26 Shad Thames, London SE1 2YG",
           "query": "Browns Butlers Wharf, 26 Shad Thames, London SE1 2YG, United Kingdom",
           "note": "Reservations recommended. On the Thames at Butlers Wharf, next to Tower Bridge and a short walk from the Cheval Three Quays."
         },
         {
-          "rank": 2,
+          "rank": 24,
           "name": "The Marquis",
           "address": "51-52 Chandos Pl, London WC2N 4HS",
           "query": "The Marquis, 51-52 Chandos Pl, London WC2N 4HS, United Kingdom",
@@ -760,7 +889,7 @@
     { "date": "2027-06-10", "city": "manchester", "stay": "manchester", "title": "Train to Manchester", "tags": ["travel","sightseeing","food"], "legs": ["train-lon-man"], "plan": "Check out of the Cheval Three Quays after a relaxed morning, then a midday Advance train from Euston (Avanti, 2h07), a named train chosen so there is time to collect bags; drop bags at the Kimpton Clocktower (check-in from 3 PM), a 10-minute walk from Piccadilly. Afternoon: Science and Industry Museum or a Man City stadium tour; dinner in Spinningfields.", "places": [{"name":"Science and Industry Museum","query":"Science and Industry Museum, Manchester"},{"name":"Spinningfields","query":"Spinningfields, Manchester"}] },
     { "date": "2027-06-11", "city": "manchester", "stay": "manchester", "title": "OASIS - Night one", "tags": ["concert", "sightseeing", "food"], "legs": [], "highlight": true, "plan": "OASIS AT THE ETIHAD, NIGHT ONE. Easy day in the Northern Quarter: record shops, cafes, Oasis's old stomping ground. Early dinner, then Metrolink to Etihad Campus.", "places": [{"name":"Northern Quarter","query":"Northern Quarter, Manchester"},{"name":"Etihad Stadium","query":"Etihad Stadium, Manchester"}] },
     { "date": "2027-06-12", "city": "manchester", "stay": "manchester", "title": "OASIS - Night two", "tags": ["concert"], "legs": [], "highlight": true, "plan": "OASIS AT THE ETIHAD, NIGHT TWO. Recover slowly before the Saturday show." },
-    { "date": "2027-06-13", "city": "london", "stay": "london-2", "title": "Back to London", "tags": ["travel", "sightseeing", "food"], "legs": ["train-man-lon"], "plan": "Avanti back to Euston by midday. Proper Sunday roast. Afternoon: the Soho walking tour below, or the National Gallery and the South Bank.", "places": [{"name":"National Gallery","query":"National Gallery, London"}] },
+    { "date": "2027-06-13", "city": "london", "stay": "london-2", "title": "Back to London", "tags": ["travel", "sightseeing", "food"], "legs": ["train-man-lon"], "plan": "Avanti back to Euston by midday. Sunday roast at The George (Great Portland Street; book a table ahead), then a visit to Ye Olde Cheshire Cheese on Fleet Street. Afternoon: the Soho walking tour below, or the National Gallery and the South Bank.", "places": [{"name":"The George","query":"The George, Great Portland Street, London W1W 7NT"},{"name":"Ye Olde Cheshire Cheese","query":"Ye Olde Cheshire Cheese, 145 Fleet Street, London EC4A 2BU"},{"name":"National Gallery","query":"National Gallery, London"}], "route": false },
     { "date": "2027-06-14", "city": "london", "stay": "london-2", "title": "Tower of London tour and Camden Town", "tags": ["sightseeing","tour","food"], "legs": [], "plan": "8:30 AM Express Tower of London tour with Crown Jewels access (about 1.5 hours guided, then free time in the White Tower and Jewel House; meet outside the Tower gift shop, a short walk from the Cheval Three Quays). Afternoon: a trip to Camden Town via Piccadilly Circus. Camden Market and Camden Lock, then the pubs The Hawley Arms, The Dublin Castle and The Edinboro Castle (none booked; check opening hours, and leave time to get back for the evening tour). Evening: Devour historic pubs food tour in the City of London (about 3.5 hours, four tastings with drinks, from about $97 per person per the tour page; not booked, so check dates and times).", "places": [{"name":"Tower of London","query":"Tower of London"},{"name":"Piccadilly Circus","query":"Piccadilly Circus, London, UK"},{"name":"Camden Market","query":"Camden Market, 54-56 Camden Lock Pl, London NW1 8AF, United Kingdom"},{"name":"The Hawley Arms","query":"The Hawley Arms, 2 Castlehaven Rd, London NW1 8QU, United Kingdom"},{"name":"The Dublin Castle","query":"The Dublin Castle, 94 Parkway, London NW1 7AN, United Kingdom"},{"name":"The Edinboro Castle","query":"The Edinboro Castle, 57 Mornington Terrace, London NW1 7RU, United Kingdom"},{"name":"Devour pubs tour meeting point (St Andrew Holborn gardens)","query":"The Gardens of St Andrew's Church Holborn, 5 St Andrew Street, London EC4A 3AF"}], "tours": ["tour-tower"], "route": false },
     { "date": "2027-06-15", "city": "london", "stay": "london-2", "title": "Changing of the Guard tour", "tags": ["sightseeing","food","tour"], "legs": [], "plan": "Morning: Westminster Abbey, Big Ben and Changing of the Guard tour (about 3 hours, start time to be confirmed; thetourguy.com, in cart). Borough Market for a late lunch. Dinner is open. Note: the palace Changing of the Guard is held Monday, Wednesday and Friday at 11 AM, and Jun 15 is a Tuesday, so check what the tour shows (see the schedule card below).", "places": [{"name":"Westminster Abbey","query":"Westminster Abbey, London"},{"name":"Borough Market","query":"Borough Market, London"}], "tours": ["tour-guard"] },
     { "date": "2027-06-16", "city": "london", "stay": "london-2", "title": "Fly home", "tags": ["travel","departure"], "legs": ["air-lhr-lax"], "plan": "Relaxed morning and an early lunch, then your pre-booked Transferz Executive car picks you up at the Cheval Three Quays at 12:00 PM (about 59 minutes to Heathrow, estimated arrival 12:59 PM, room for 3 passengers), which leaves about 3.5 hours before AA 135 at 4:25 PM. All three of you land at LAX at 7:35 PM the same evening." }
@@ -798,6 +927,7 @@
     { "item": "Oasis tickets, Etihad Fri Jun 11 + Sat Jun 12", "bookable": "YES - DO THIS FIRST", "when": "now", "note": "Six tickets: three seats for each of the two shows. The hardest-to-get items in the trip. Official channels / face-value resale; the Tue Jun 8 and Tue Jun 15 shows are backups that still fit the trip frame." },
     { "item": "Sky Garden tickets, Jun 9", "bookable": "OPENS MAY 19", "when": "later", "note": "Free but timed; slots open about 3 weeks ahead, so book around May 19, 2027. Confirm the release day on the Sky Garden site." },
     { "item": "Clube de Jornalistas dinner, Lisbon (possible first night, May 22)", "bookable": "RESERVE EARLY", "when": "later", "note": "Close to the hotel and a possible first-night dinner. Make a reservation; check their booking options." },
+    { "item": "The George, Sunday roast, London, Jun 13, then Ye Olde Cheshire Cheese", "bookable": "RESERVE EARLY", "when": "later", "note": "Book a table at The George (Great Portland Street) for the Sunday roast on Jun 13; Sunday roasts fill up, so check their booking window and book ahead. Afterwards, a visit to Ye Olde Cheshire Cheese on Fleet Street (check whether it takes bookings)." },
     { "item": "BAHR & Terrace rooftop table, May 25", "bookable": "RESERVE EARLY", "when": "later", "note": "Drinks and snacks on May 25 (Praça Luís de Camões 2, 5th floor, Bairro Alto). Book a table well ahead; it fills up. Check the booking window and any minimum spend on their site." },
     { "item": "Mito dinner, Porto, May 27", "bookable": "RESERVE EARLY", "when": "later", "note": "Dinner after sunset drinks (R. de José Falcão 183). Book a table well ahead; check the booking window on their site." },
     { "item": "Manchester hotel, Jun 10-13", "bookable": "BOOKED", "when": "done", "note": "Kimpton Clocktower. Free cancellation until Jun 3; after that the first night is charged." },
